@@ -1,6 +1,14 @@
 import { RAZORPAY_KEY_ID } from '@env';
 import React, { useEffect } from 'react';
-import { Alert, FlatList, Image, Text, ToastAndroid, TouchableOpacity, View } from 'react-native';
+import {
+  Alert,
+  FlatList,
+  Image,
+  Text,
+  ToastAndroid,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { TrashIcon } from 'react-native-heroicons/outline';
 import RazorpayCheckout from 'react-native-razorpay';
 import { useDispatch, useSelector } from 'react-redux';
@@ -36,12 +44,15 @@ const CartComponent = () => {
         contact: user?.userContact,
         name: user?.userName,
       },
-      theme: { color: Colors.InfoLight },
+      theme: { color: Colors.INFO_LIGHT },
     };
     RazorpayCheckout.open(options)
       .then(data => {
         console.log('Payment Successful:', data);
-        Alert.alert(Title.PAYMENT_SUCCESSFUL, `ID: ${data.razorpay_payment_id}`);
+        Alert.alert(
+          Title.PAYMENT_SUCCESSFUL,
+          `ID: ${data.razorpay_payment_id}`,
+        );
       })
       .catch(error => {
         ToastAndroid.show(
@@ -65,19 +76,20 @@ const CartComponent = () => {
       },
       {
         text: Title.NO,
-        onPress: () => { },
+        onPress: () => {},
       },
     ]);
   };
 
-  useEffect(() => { }, [cartInfo]);
+  useEffect(() => {}, [cartInfo]);
 
   if (cartInfo?.length == 0) {
     return (
       <View
         className="flex-1 justify-center items-center"
-        style={{ backgroundColor: GlobalAppTheme(theme) }}>
-        <Text style={{ color: Colors.White }} className="text-2xl">
+        style={{ backgroundColor: GlobalAppTheme(theme) }}
+      >
+        <Text style={{ color: Colors.WHITE }} className="text-2xl">
           {Title.CART_IS_EMPTY}
         </Text>
       </View>
@@ -85,9 +97,7 @@ const CartComponent = () => {
   }
 
   return (
-    <View
-      className="flex-1"
-      style={{ backgroundColor: GlobalAppTheme(theme) }}>
+    <View className="flex-1" style={{ backgroundColor: GlobalAppTheme(theme) }}>
       <HeaderContainer back={true} header={'Cart'} Drawer={true} />
 
       <FlatList
@@ -96,7 +106,14 @@ const CartComponent = () => {
           <View className="my-4 bg-slate-800 rounded-lg mx-2">
             <View
               className="rounded-T-lg flex flex-row"
-              style={{ backgroundColor: GlobalAppTheme(theme, Colors.INFO_DARK, Colors.INFO_LIGHT) }}>
+              style={{
+                backgroundColor: GlobalAppTheme(
+                  theme,
+                  Colors.INFO_DARK,
+                  Colors.INFO_LIGHT,
+                ),
+              }}
+            >
               <Image
                 className="rounded-lg"
                 source={{
@@ -123,7 +140,8 @@ const CartComponent = () => {
                   id: item?.item?.data?.id,
                   name: item?.item?.data?.Name,
                 })
-              }>
+              }
+            >
               <View className="items-center my-3">
                 <TrashIcon color={Colors.WHITE} />
               </View>
@@ -137,10 +155,13 @@ const CartComponent = () => {
         className="mx-2 rounded-xl"
         style={{
           backgroundColor:
-            theme === AppTheme.LIGHT ? Colors.BUTTON_DARK   : Colors.BUTTON_LIGHT,
-        }}>
+            theme === AppTheme.LIGHT ? Colors.BUTTON_DARK : Colors.BUTTON_LIGHT,
+        }}
+      >
         <View className="p-4 w-full ">
-          <Text className="text-center text-lg text-white">{Title.CHECK_OUT}</Text>
+          <Text className="text-center text-lg text-white">
+            {Title.CHECK_OUT}
+          </Text>
         </View>
       </TouchableOpacity>
     </View>
