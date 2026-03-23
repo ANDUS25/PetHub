@@ -2,16 +2,21 @@ const Title = {
   ARE_WANT_TO_DELETE_THIS_CART: 'Are Want to delete This cart',
   CART_IS_EMPTY: 'Cart is empty',
   CHECK_OUT: 'CheckOut',
+  CLOSE: 'close',
+  DIALOG_BOX_SUCCESS: 'Congrats! this is dialog box success',
+  DIALOG_BOX: 'dialog box',
+  FIND_NEAR_BY_DAY_CARE: 'Find near by day care',
   LOGOUT: 'LogOut',
   NO: 'No',
   ONLY_SIGN: '/-',
   PAYMENT_SUCCESSFUL: 'Payment Successful',
+  REDIRECTING_TO_BROWSER: 'Redirecting to Browser',
   RUPEES_SYMBOL: '₹',
+  Success: 'Success',
   TOTAL_QUANTITY: 'Total quantity',
+  VETERAN: 'Veteran +',
   WELCOME: 'Welcome',
   YES: 'Yes',
-  VETERAN: 'Veteran +',
-  FIND_NEAR_BY_DAY_CARE: 'Find near by day care',
 };
 
 const ScreenTitle = {

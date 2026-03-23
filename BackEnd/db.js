@@ -7,7 +7,7 @@ const connectToDatabase = async () => {
     mongoose.connection.on(Title.CONNECTED, () => {
       console.log(Title.APP_IS_CONNECTED);
     });
-    mongoose.connection.on(Title.ERRORl, () => {
+    mongoose.connection.on(Title.ERROR, () => {
       console.log(Title.ERROR_OCCURRED);
     });
 

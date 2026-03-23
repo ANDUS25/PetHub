@@ -9,12 +9,14 @@ import {
 } from 'react-native';
 import { useSelector } from 'react-redux';
 import Header from '../../Container/Header';
+import { AppTheme, Title } from '../../utils/Strings';
+import Colors from '../../utils/Colors';
 
 const AboutUs = () => {
   const theme = useSelector(state => state.ThemeReducer.value);
 
   const newPageHandler = () => {
-    ToastAndroid.show('Redirecting to Browser', ToastAndroid.SHORT);
+    ToastAndroid.show(Title.REDIRECTING_TO_BROWSER, ToastAndroid.SHORT);
 
     setTimeout(() => {
       Linking.openURL('https://www.mixo.io/site/pet-hub-nbuoc');
@@ -28,7 +30,8 @@ const AboutUs = () => {
         style={{
           flex: 1,
           backgroundColor: theme === 'light' ? '#B4D4FF' : '#201658',
-        }}>
+        }}
+      >
         <View>
           <Header back={true} header={'About Us'} Drawer={true} />
 
@@ -39,8 +42,8 @@ const AboutUs = () => {
                 color: theme === 'light' ? '#000' : '#fff',
                 fontFamily: 'Mulish-Light',
               }}
-              className="">
-              <Text style={{fontSize: 28}} className="font-bold ml-4">
+            >
+              <Text style={{ fontSize: 28 }} className="font-bold ml-4">
                 M
               </Text>
               r. Saajan Gangawane the owner of PetHub who is animal lover and
@@ -52,8 +55,8 @@ const AboutUs = () => {
                 color: theme === 'light' ? '#000' : '#fff',
                 fontFamily: 'Mulish-Light',
               }}
-              className="my-2 text-justify">
-              {' '}
+              className="my-2 text-justify"
+            >
               He is in pet industry since his childhood and started taking care
               of animal, he is the person who not only understands the interest
               of humans over pet but also understands the problems and challenge
@@ -70,19 +73,21 @@ const AboutUs = () => {
             </Text>
             <Text
               style={{
-                color: theme === 'light' ? '#000' : '#fff',
+                color: theme === AppTheme.LIGHT ? Colors.BLACK : Colors.WHITE,
                 fontSize: 20,
                 fontFamily: 'Mulish-Light',
-              }}>
+              }}
+            >
               PetHub is an ITPC product, for more details please visit{' '}
               <Text
                 style={{
-                  borderBottomColor: theme == 'light' ? '#000' : '#fff',
+                  borderBottomColor:
+                    theme == AppTheme.LIGHT ? Colors.BLACK : Colors.WHITE,
                   borderBottomWidth: 4,
                 }}
-                onPress={() => newPageHandler()}
-                className={'underline border-b-2'}>
-                {' '}
+                onPress={newPageHandler}
+                className={'underline border-b-2'}
+              >
                 IT Pro Consult
               </Text>
             </Text>

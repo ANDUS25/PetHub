@@ -1,21 +1,22 @@
 import React from 'react';
-import { Dimensions, View } from 'react-native';
+import { Dimensions, TextInput, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import Colors from '../../utils/Colors';
 
-
 const { width, height } = Dimensions.get('window');
 
-const DropdownContainer = ({
-  data,
-  onChange,
-  itemTextStyle,
-  style,
-  itemContainerStyle,
-  containerStyle,
-  placeholder,
-  selectedTextStyle,
-}) => {
+interface DropdownContainerInterface {
+  data:string[];
+  onChange:()=>void;
+  itemTextStyle:TextInput<style>;
+  style;
+  itemContainerStyle;
+  containerStyle;
+  placeholder:string;
+  selectedTextStyle;
+}
+
+const DropdownContainer = () => {
   return (
     <View>
       <Dropdown
@@ -50,7 +51,7 @@ const DropdownContainer = ({
         }}
         onChange={onChange}
         maxHeight={400}
-      // mode={'modal'}
+        // mode={'modal'}
       />
     </View>
   );
