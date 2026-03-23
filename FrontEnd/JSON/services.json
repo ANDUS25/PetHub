@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "serviceName": "Groomers",
+    "serviceDetails": "There are groomers who do the basic bath and nail trim and groomers who specialize in perfectly-presented dogs that are headed to the Westminster Dog Show.",
+    "serviceImage": "https://images.unsplash.com/photo-1528846596754-23db743ea0e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBldCUyMGhhaXIlMjBjdXR8ZW58MHx8MHx8fDA%3D",
+    "servicesInDepth": [
+      {
+        "Services Offered": "Pet groomers offer a range of services tailored to the needs of different pets. These may include bathing, blow-drying, brushing, haircutting, nail trimming, ear cleaning, and gland expression."
+      },
+      {
+        "Skill and Training": "Many pet groomers undergo formal training or apprenticeships to learn grooming techniques and safety protocols. Some may also pursue certification through professional grooming associations to demonstrate their expertise."
+      },
+      {
+        "Understanding of Different Breeds": "Groomers need to understand the grooming requirements of various dog and cat breeds. Different breeds have different coat types, lengths, and textures, requiring specific grooming techniques and tools."
+      },
+      {
+        "Safety and Handling": "Pet groomers must prioritize the safety and well-being of the animals in their care. This includes proper handling techniques to ensure the pet feels secure and comfortable throughout the grooming process."
+      },
+      {
+        "Client Communication": "Effective communication with pet owners is essential for groomers. They need to understand the owner's preferences for their pet's grooming and be able to discuss any health or behavior concerns they observe during the grooming session."
+      },
+      {
+        "Equipment and Facilities": " Groomers use a variety of tools and equipment such as clippers, shears, brushes, and grooming tables. They also work in specialized grooming facilities equipped with bathing stations, drying cages, and grooming tables."
+      },
+      {
+        "Demand and Job Outlook": "With the increasing emphasis on pet care and grooming, the demand for skilled pet groomers continues to grow. Many pet owners prioritize regular grooming as part of their pet's overall health and well-being, creating opportunities for groomers."
+      },
+      {
+        "Professional Associations": "There are professional associations and organizations for pet groomers, such as the National Dog Groomers Association of America (NDGAA) and the International Professional Groomers, Inc. (IPG), which provide resources, training, and certification programs for groomers."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "serviceName": "Pet sitting",
+    "serviceDetails": "While pet sitting was once an after school job for teens, it’s grown into much more. Many pet owners want a customized, boutique experience for their animals while they're away. Not only is pet-sitting a fun business to operate because you get to interact with animals daily, but it's also a low-cost business to start and operate.",
+    "serviceImage": "https://images.pexels.com/photos/5749819/pexels-photo-5749819.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "servicesInDepth": [
+      {
+        "Service Description": "Pet sitters visit the homes of pet owners to take care of their pets while they are away. This service can include feeding, providing fresh water, administering medication, walking dogs, cleaning litter boxes, and providing companionship."
+      },
+      {
+        "In-home Care": "Unlike boarding facilities, pet sitting allows pets to remain in their familiar environment, reducing stress and anxiety for the animals. This is especially beneficial for pets that are elderly, have medical conditions, or are easily stressed by new environments."
+      },
+      {
+        "Customized Care": "Pet sitting services can be tailored to meet the specific needs of each pet. Pet sitters typically meet with the pet owners prior to their departure to discuss feeding schedules, exercise routines, and any special requirements or instructions for caring for the pets."
+      },
+      {
+        "Duration of Service": "Pet sitting can range from short visits throughout the day to overnight stays, depending on the needs of the pet and the preferences of the owner. Some pet sitters may also offer extended stays for clients who are traveling for longer periods."
+      },
+      {
+        "Qualifications": "Professional pet sitters may have training in pet care, first aid, and behavior management. They may also be bonded and insured for liability purposes. Additionally, pet sitters should have a genuine love for animals and experience in caring for a variety of pets."
+      },
+      {
+        "Benefits for Pet Owners": "Pet sitting provides peace of mind for pet owners knowing that their pets are receiving personalized care in their absence. It eliminates the need for pets to be transported to a boarding facility, which can be stressful for both the pets and their owners."
+      },
+      {
+        "Communication": "Good pet sitters maintain open communication with pet owners while they are away, providing updates on their pets' well-being and any notable observations or concerns."
+      },
+      {
+        "Cost": "The cost of pet sitting services varies depending on factors such as the duration of the visits, the number of pets, and any additional services required. Rates may be charged per visit or on an hourly basis."
+      },
+      {
+        "Finding a Pet Sitter": "Pet owners can find pet sitters through referrals from friends, family, or veterinarians, or by using online platforms that connect pet owners with local pet sitters. It's important for pet owners to thoroughly vet potential pet sitters and ensure they are reputable and trustworthy."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "serviceName": "Pet transportation",
+    "serviceDetails": "Traveling with pets can be stressful. If you have a reliable method of pet transportation, or even just some tips to share with pet owners, you can offer your services as a pet travel specialist, that helps pet owners safely transport their pets from one place to the next.",
+    "serviceImage": "https://plus.unsplash.com/premium_photo-1683133869056-e9eac32f6b53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fFBldCUyMHRyYW5zcG9ydGF0aW9ufGVufDB8fDB8fHww",
+    "servicesInDepth": [
+      {
+        "Purpose": "Pet transportation is often necessary when pet owners are moving to a new home, traveling long distances, or relocating internationally. It may also be required for veterinary visits, grooming appointments, or other reasons."
+      },
+      {
+        "Modes of Transportation": "Pets can be transported by various modes of transportation, including cars, airplanes, trains, boats, and specialized pet transport services. The choice of transportation method depends on factors such as the distance of travel, the size and species of the pet, and any specific requirements or regulations."
+      },
+      {
+        "Safety and Comfort": "Ensuring the safety and comfort of pets during transportation is essential. Pets should be securely contained in appropriate carriers or crates that are well-ventilated and provide enough space for the animal to stand, turn around, and lie down comfortably. Adequate food, water, and bedding should also be provided for longer journeys."
+      },
+      {
+        "Regulations and Requirements": "When transporting pets, it's important to comply with local and international regulations and requirements. This may include obtaining health certificates, vaccinations, and microchips, as well as adhering to specific transportation guidelines set by airlines, train companies, or other transportation providers."
+      },
+      {
+        "Pet-Friendly Accommodations": "For long-distance travel, pet owners may need to arrange pet-friendly accommodations at hotels or other lodging facilities along the route. It's advisable to research and book accommodations in advance to ensure availability and to confirm pet policies and fees."
+      },
+      {
+        "Pet Transport Services": "Professional pet transport services specialize in transporting pets safely and efficiently. These services often provide door-to-door transportation and may offer additional services such as pet grooming, veterinary care, and assistance with paperwork and documentation."
+      },
+      {
+        "Pet Travel Insurance": " Pet owners may consider purchasing pet travel insurance to cover unexpected expenses related to pet transportation, such as trip cancellations, delays, or medical emergencies."
+      },
+      {
+        "Preparation and Planning": "Proper preparation and planning are crucial for successful pet transportation. This may include acclimating pets to their carriers, scheduling transportation during favorable weather conditions, and packing essential supplies such as food, water, medications, and comfort items."
+      },
+      {
+        "Pet Behavior and Stress Management": "Some pets may experience stress or anxiety during transportation, especially if they are not accustomed to traveling. Pet owners should take steps to minimize stress by providing familiar objects, maintaining a calm environment, and offering reassurance and comfort to their pets."
+      },
+      {
+        "Cost": "The cost of pet transportation varies depending on factors such as the distance of travel, the mode of transportation, and any additional services required. Pet owners should budget for transportation costs and consider the value of professional assistance for long-distance or international travel."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "serviceName": "Pet restaurant",
+    "serviceDetails": "Just as with the food they put into their own bodies, pet owners have become increasingly concerned about the quality of the food their pets eat. People are continually on the lookout for pet foods that they feel have additional health benefits. There are basically two approaches to pet food businesses: You can either produce the pet food yourself or become a distributor for a particular type of food. Dog bakeries, homemade healthy dog treats, raw foods, gourmet foods—any of these could be extremely lucrative if the pets (and the owners) like what's on offer.",
+    "serviceImage": "https://plus.unsplash.com/premium_photo-1683141103887-490412503078?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fFBldCUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D",
+    "servicesInDepth": [
+      {
+        "Pet-Friendly Environment": "Pet restaurants typically provide a welcoming environment for both pets and their owners. They may offer outdoor seating areas where pets are allowed, as well as designated indoor areas that accommodate pets."
+      },
+      {
+        "Menu for Pets": "Pet restaurants often feature a menu specifically designed for pets, offering a variety of pet-friendly dishes and treats. These may include specially prepared meals, snacks, and desserts made with ingredients that are safe and nutritious for pets."
+      },
+      {
+        "Menu for Humans": " In addition to pet-friendly options, pet restaurants usually offer a menu for human patrons, including a range of dishes and beverages. The human menu may include options for breakfast, lunch, dinner, and snacks, catering to different dietary preferences and restrictions."
+      },
+      {
+        "Pet-Friendly Amenities": "Pet restaurants may provide amenities to ensure the comfort and enjoyment of pets and their owners. These amenities may include water bowls, pet beds or mats, leash hooks, and waste disposal stations for pet waste."
+      },
+      {
+        "Health and Safety Standards": " Pet restaurants adhere to health and safety standards to maintain a clean and hygienic environment for both pets and humans. They may implement measures such as regular cleaning and sanitization, pest control, and proper food handling practices."
+      },
+      {
+        "Pet Etiquette": "Pet restaurants often have guidelines or etiquette rules in place to ensure the well-being and harmony of all patrons. These rules may include requirements for pets to be well-behaved, leashed or restrained, and up-to-date on vaccinations."
+      },
+      {
+        "Socialization Opportunities": " Pet restaurants provide opportunities for pets and their owners to socialize with other pets and pet owners. This social interaction can be beneficial for pets' mental and emotional well-being and can create a sense of community among pet lovers."
+      },
+      {
+        "Events and Activities": "Some pet restaurants host special events or activities for pets and their owners, such as pet-friendly brunches, Yappy Hours (happy hours for dogs), costume contests, and birthday parties for pets. These events add to the fun and enjoyment of visiting pet restaurants."
+      },
+      {
+        "Pet Retail Area": "Some pet restaurants may have a retail area where pet owners can purchase pet-related products such as toys, accessories, grooming supplies, and pet-themed merchandise."
+      },
+      {
+        "Local Regulations": "Pet restaurants must comply with local regulations and ordinances related to pet-friendly dining establishments. These regulations may vary depending on the jurisdiction and may include licensing requirements, health inspections, and zoning restrictions."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "serviceName": "Pet Training",
+    "serviceDetails": "Many people love their animals but work long hours which makes it difficult to provide education and training. That's where a dog training service comes in. With a low-cost startup and minimal tools needed, you can start a dog training business with very little cash on hand. While not required, it can help to build your credibility with customers by having a professional dog training certification.",
+    "serviceImage": "https://plus.unsplash.com/premium_photo-1679519605865-063b2fa17b07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzd8fFBldCUyMFRyYWluaW5nfGVufDB8fDB8fHww",
+    "servicesInDepth": [
+      {
+        "Purpose": "The primary purpose of pet training is to establish clear communication between pet owners and their animals, ensuring a harmonious and mutually satisfying relationship. Training helps pets understand what is expected of them and enables owners to effectively manage and control their behavior."
+      },
+      {
+        "Basic Training Commands": "Basic training commands for dogs often include sit, stay, down, come, heel, and leave it. These commands form the foundation of obedience training and are essential for teaching dogs to respond reliably to their owner's cues."
+      },
+      {
+        "Positive Reinforcement": "Positive reinforcement is a widely used training technique that involves rewarding desired behaviors with treats, praise, toys, or other rewards. This method encourages pets to repeat behaviors that result in positive outcomes, making learning enjoyable and effective."
+      },
+      {
+        "Clicker Training": "Clicker training is a form of positive reinforcement training that uses a small handheld device called a clicker to mark desired behaviors. When the pet performs the desired behavior, the trainer immediately clicks the clicker and then rewards the pet, associating the click with a positive outcome."
+      },
+      {
+        "Socialization": "Socialization is an essential aspect of pet training, especially for puppies and kittens. It involves exposing pets to various people, animals, environments, and experiences in a positive and controlled manner. Proper socialization helps pets develop confidence, reduces fear and aggression, and promotes healthy interactions with others."
+      },
+      {
+        "Behavior Modification": "Pet training also includes behavior modification techniques to address unwanted behaviors such as excessive barking, chewing, jumping, digging, aggression, and separation anxiety. Behavior modification techniques may involve identifying the underlying cause of the behavior and implementing strategies to modify or eliminate it."
+      },
+      {
+        "Professional Training Services": "While many pet owners choose to train their pets themselves, others may seek the assistance of professional trainers or behaviorists. Professional training services may include group classes, private lessons, board-and-train programs, and specialized training programs for specific behavioral issues or activities such as agility, obedience trials, or therapy work."
+      },
+      {
+        "Consistency and Patience": "Successful pet training requires consistency, patience, and commitment from both the pet owner and the animal. Training sessions should be short, frequent, and conducted in a positive and supportive manner. Consistent reinforcement of desired behaviors and clear communication are key to achieving lasting results."
+      },
+      {
+        "Lifelong Learning": "Pet training is an ongoing process that continues throughout the pet's life. Even well-trained pets benefit from regular reinforcement and practice to maintain their skills and prevent behavioral regression. Training sessions can be incorporated into daily routines as fun and engaging activities for pets and owners to enjoy together."
+      },
+      {
+        "Benefits of Training": "Properly trained pets are happier, safer, and more well-adjusted companions. Training enhances the bond between pets and their owners, improves communication and cooperation, and enhances the overall quality of life for both pets and humans."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "serviceName": "Pet walker",
+    "serviceDetails": "If your idea of a good time involves long walks or exercise, becoming a dog walker might be a good idea. Most dogs need anywhere from 30 minutes to two hours of exercise each day, so becoming a dog walker can help both dogs and yourself stay healthy. What’s more, the average income of a dog walker is $29,921 per year.2 Getting paid to exercise? Sign me up! Apps like Rover and Wag! make it extremely easy to get paired with potential clients, based on your availability, skill-set, and experience level.",
+    "serviceImage": "https://plus.unsplash.com/premium_photo-1664126702573-f23dd474fe87?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fFBldCUyMHdhbGtlcnxlbnwwfHwwfHx8MA%3D%3D",
+    "servicesInDepth": [
+      {
+        "Service Description": "Pet walkers offer dog walking services to ensure that pets receive regular exercise, mental stimulation, and socialization opportunities. They typically visit the homes of pet owners to take the dogs for walks around the neighborhood, local parks, or other outdoor areas."
+      },
+      {
+        "Frequency and Duration": "Pet walking services can be scheduled according to the needs and preferences of the pet owner. Walks may be scheduled once or multiple times per day, depending on the dog's breed, age, energy level, and health requirements. The duration of walks can vary from short bathroom breaks to longer walks of 30 minutes to an hour or more."
+      },
+      {
+        "Individual and Group Walks": "Pet walkers may offer both individual and group walks, depending on the pet owner's preferences and the compatibility of the dogs. Individual walks provide one-on-one attention and personalized care, while group walks allow dogs to socialize and interact with other dogs under the supervision of the pet walker."
+      },
+      {
+        "Safety Measures": "Pet walkers prioritize the safety and well-being of the dogs in their care. They ensure that dogs are properly leashed or harnessed during walks and use secure equipment to prevent escapes or accidents. Pet walkers are trained to handle various situations, such as encountering aggressive dogs, distractions, or inclement weather conditions."
+      },
+      {
+        "Pet Interaction": "In addition to walking, pet walkers may provide basic care and interaction with the dogs, such as feeding, giving water, administering medication, and offering companionship. They may also engage in playtime, training exercises, or other activities to keep the dogs mentally and physically stimulated."
+      },
+      {
+        "Professionalism and Reliability": "Professional pet walkers are reliable, responsible, and trustworthy individuals who are committed to providing quality care for pets. They adhere to schedules, communicate effectively with pet owners, and prioritize the safety and happiness of the animals in their care."
+      },
+      {
+        "Bonding and Relationship Building": "Pet walkers develop strong bonds and relationships with the dogs they walk on a regular basis. They get to know each dog's personality, preferences, and quirks, allowing them to provide personalized care and attention tailored to the individual needs of each pet."
+      },
+      {
+        "Insurance and Certification": "Some pet walkers may be insured and certified through professional organizations or pet care associations. Certification programs may cover topics such as pet first aid, dog behavior, handling techniques, and business management practices, ensuring that pet walkers have the knowledge and skills to provide competent and compassionate care."
+      },
+      {
+        "Client Communication": "Pet walkers maintain open and transparent communication with pet owners, providing updates on their walks, the dog's behavior, and any notable observations or concerns. They may use communication tools such as text messages, phone calls, or written notes to keep pet owners informed."
+      },
+      {
+        "Benefits for Dogs": "Regular walks with a pet walker provide numerous benefits for dogs, including exercise, mental stimulation, socialization, and relief from boredom and anxiety. Dogs that receive regular walks are generally healthier, happier, and better-behaved pets."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "serviceName": "Veterinarian",
+    "serviceDetails": "This therapy addresses issues such as aggression, anxiety, compulsive, behavior, and other behavioral concerns in pets. It often involves a combination of training methods, environmental modifications, and sometimes, with veterinarian consultation, medication.Certified animal behaviorists or veterinarians with a specialty in behavior often lead these interventions.",
+    "serviceImage": "https://images.unsplash.com/photo-1642513730712-2ccba1dbef1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFZldGVyaW5hcmlhbnxlbnwwfHwwfHx8MA%3D%3D",
+    "servicesInDepth": [
+      {
+        "Professional Care Providers": "Veterinarians are trained professionals who specialize in providing medical care for animals, including pets, livestock, zoo animals, and wildlife."
+      },
+      {
+        "Medical Expertise": "They have expertise in diagnosing and treating various health conditions and diseases that affect animals. This includes performing surgeries, prescribing medications, and providing preventive care."
+      },
+      {
+        "Preventive Medicine": " Veterinarians emphasize preventive medicine to maintain the health and well-being of animals. This includes vaccinations, parasite control, dental care, and nutrition counseling."
+      },
+      {
+        "Emergency Services": "Many veterinarians offer emergency services to address urgent medical needs and injuries in animals. These services are available outside regular business hours to ensure prompt care when emergencies arise."
+      },
+      {
+        "Surgical Procedures": "Veterinarians are skilled in performing surgical procedures on animals, ranging from routine spaying and neutering to more complex surgeries such as orthopedic procedures and tumor removal."
+      },
+      {
+        "Diagnostic Tools": "They utilize various diagnostic tools and techniques to assess the health of animals, including blood tests, imaging studies (X-rays, ultrasound), and laboratory analyses."
+      },
+      {
+        "Animal Welfare Advocates": "Veterinarians advocate for the welfare and humane treatment of animals. They may work with animal welfare organizations, government agencies, and advocacy groups to promote animal health and welfare."
+      },
+      {
+        "Client Education": "Veterinarians educate pet owners and animal caretakers about proper animal care, nutrition, behavior, and preventive health measures. They provide guidance on topics such as vaccination schedules, parasite prevention, and grooming."
+      },
+      {
+        "Continuing Education": "Veterinarians engage in ongoing education and training to stay updated on the latest advances in veterinary medicine and best practices. This ensures that they provide high-quality care using evidence-based approaches."
+      },
+      {
+        "Collaboration": "Veterinarians often collaborate with other professionals, including veterinary technicians, animal behaviorists, and specialists (e.g., dermatologists, oncologists), to provide comprehensive care for animals with complex medical needs."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "serviceName": "Pet Day Care/Hostel",
+    "serviceDetails": "Zoning can also be in question for Dog Daycare businesses. With these, the animals are not kept overnight as they are in a kennel. Instead, they are guests during work hours. The dog daycare business is one of the fast-growing segments of the pet care industry. People at work love to check in on their pets via live stream and video contact.",
+    "serviceImage": "https://plus.unsplash.com/premium_photo-1663054650521-511081363675?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fFBldCUyMERheSUyMENhcmV8ZW58MHx8MHx8fDA%3D",
+    "servicesInDepth": [
+      {
+        "Location and Facilities": "The pet day care is located in a spacious facility with both indoor and outdoor areas for pets to play and relax. The facility is equipped with secure fencing, comfortable resting areas, and separate spaces for small and large dogs."
+      },
+      {
+        "Hours of Operation": "The pet day care operates Monday through Friday from 7:00 AM to 7:00 PM, with extended hours on Saturdays from 9:00 AM to 5:00 PM. This schedule allows pet owners flexibility in dropping off and picking up their pets according to their work or travel schedules."
+      },
+      {
+        "Services Offered": "The pet day care offers a range of services to cater to the needs of pets and their owners. This includes supervised group play sessions, individual attention from staff members, feeding, medication administration, and outdoor potty breaks throughout the day."
+      },
+      {
+        "Safety Protocols": "The safety and well-being of pets are top priorities. The pet day care implements strict safety protocols, including closely supervised play sessions to prevent conflicts or injuries among dogs, regular health checks upon arrival to ensure all pets are healthy and vaccinated, and emergency procedures in case of medical emergencies."
+      },
+      {
+        "Enrichment Activities": "Pets are provided with a variety of enrichment activities to keep them mentally stimulated and engaged during their stay. This may include interactive toys, agility courses, and sensory stimulation activities to promote physical exercise and mental stimulation."
+      },
+      {
+        "Resting Areas": "Comfortable resting areas are available for pets to relax and take breaks as needed. These areas are equipped with bedding, blankets, and cozy spots for pets to rest and recharge after play sessions."
+      },
+      {
+        "Webcam Access": "Pet owners have the option to access live webcam feeds to check on their pets throughout the day. This provides peace of mind for pet owners who want to ensure their pets are happy and safe while they are away."
+      },
+      {
+        "Additional Services": "In addition to day care services, the facility may offer additional services such as overnight boarding for pets who require extended care, grooming services such as baths and nail trims, and training classes to address behavior issues or reinforce obedience commands."
+      },
+      {
+        "Client Communication": "The pet day care maintains open communication with pet owners through various channels such as phone calls, emails, and text messages. Regular updates are provided on pet activities, behavior, and well-being to keep pet owners informed and involved in their pet's day care experience."
+      },
+      {
+        "Staff Qualifications": "The facility employs trained and experienced staff members who have a passion for working with animals. Staff members undergo background checks and receive training in pet first aid, CPR, and emergency response procedures to ensure the safety and well-being of all pets in their care."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "serviceName": "Pet boutique",
+    "serviceDetails": "The industry has seen an influx of innovative products, ranging from smart pet collars with GPS tracking to automated feeders. Such advancements cater to the modern pet owner’s needs and preferences. A Pet Boutique could specialize in unique products for the discerning pet owner.",
+    "serviceImage": "https://images.unsplash.com/photo-1510771463146-e89e6e86560e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fFBldCUyMGJvdXRpcXVlfGVufDB8fDB8fHww",
+    "servicesInDepth": [
+      {
+        "Location and Facilities": "The pet day care is situated in a spacious facility with both indoor and outdoor areas. The facility is equipped with secure fencing to ensure the safety of pets. There are comfortable resting areas for pets to relax between play sessions. Separate spaces are available for small and large dogs to accommodate their needs."
+      },
+      {
+        "Hours of Operation": "The pet day care operates Monday through Friday from 7:00 AM to 7:00 PM. Extended hours are offered on Saturdays from 9: 00 AM to 5: 00 PM to accommodate pet owners' schedules."
+      },
+      {
+        "Services Offered": "Supervised group play sessions are provided to encourage socialization among pets.Staff members offer individual attention to pets to meet their specific needs and preferences. Feeding and medication administration services are available according to each pet's schedule. Outdoor potty breaks are offered throughout the day to ensure pets' comfort and hygiene."
+      },
+      {
+        "Safety Protocols": "Closely supervised play sessions are conducted to prevent conflicts or injuries among pets. Regular health checks are performed upon arrival to ensure all pets are healthy and vaccinated. Emergency procedures are in place to address any medical emergencies that may arise."
+      },
+      {
+        "Enrichment Activities": "Pets are engaged in a variety of enrichment activities to stimulate their minds and bodies. Interactive toys, agility courses, and sensory stimulation activities are provided to promote physical exercise and mental stimulation."
+      },
+      {
+        "Resting Areas": "Comfortable bedding, blankets, and cozy spots are available for pets to rest and recharge between play sessions."
+      },
+      {
+        "Webcam Access": "Pet owners have the option to access live webcam feeds to check on their pets throughout the day, providing peace of mind while they are away."
+      },
+      {
+        "Additional Services": "Overnight boarding services are offered for pets requiring extended care. Grooming services such as baths and nail trims may be available upon request. Training classes are offered to address behavior issues or reinforce obedience commands."
+      },
+      {
+        "Client Communication": "The pet day care maintains open communication with pet owners through phone calls, emails, and text messages. Regular updates are provided on pet activities, behavior, and well-being to keep pet owners informed and involved."
+      },
+      {
+        "Staff Qualifications": "The facility employs trained and experienced staff members who undergo background checks and receive training in pet first aid, CPR, and emergency response procedures to ensure the safety and well-being of all pets in their care."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "serviceName": "Pet nutrition",
+    "serviceDetails": "A pet nutritionist specializes in animal nutrition and their specific dietary needs. An animal nutritionist may also be concerned with food development and processing. After getting a bachelor's degree in food sciences or agricultural sciences, you can offer your services to help pets meet their nutritional needs and provide recommendations on diet adjustments.",
+    "serviceImage": "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFBldCUyMG51dHJpdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
+    "servicesInDepth": [
+      {
+        "Balanced Diet": "A balanced diet for pets includes a mix of proteins, carbohydrates, fats, vitamins, and minerals to ensure they receive all the nutrients necessary for optimal health and well-being."
+      },
+      {
+        "Species-Specific Needs": "Different species of pets, such as dogs, cats, rabbits, and birds, have unique nutritional requirements based on their physiology, metabolism, and dietary habits. For example, cats are obligate carnivores and require a diet high in animal protein, while rabbits need high-fiber diets to support their digestive health."
+      },
+      {
+        "Life Stage Considerations": "Pet food should be formulated to meet the specific nutritional needs of different life stages, including growth and development, maintenance, and senior care. Puppies and kittens require higher levels of protein and energy to support their rapid growth and development, while senior pets may benefit from reduced calorie and fat levels to maintain a healthy weight and support aging joints."
+      },
+      {
+        "Protein Content": "High-quality protein sources, such as meat, poultry, fish, and eggs, provide essential amino acids that are the building blocks of muscle tissue, skin, coat, and other body structures. Look for pet foods with named animal protein sources listed first on the ingredient label."
+      },
+      {
+        "Healthy Fats": "Omega-3 and omega-6 fatty acids are essential for pets' skin and coat health, immune function, and inflammatory response. Sources of healthy fats include fish oil, flaxseed, and chicken fat. Avoid foods containing excessive amounts of unhealthy fats or artificial additives."
+      },
+      {
+        "Carbohydrates": "While dogs and cats are primarily carnivores, they can also benefit from moderate amounts of carbohydrates in their diet for energy and fiber. However, it's essential to choose high-quality, digestible carbohydrate sources such as whole grains, fruits, and vegetables, and avoid fillers like corn, wheat, and soy."
+      },
+      {
+        "Vitamins and Minerals": "Essential vitamins and minerals, including vitamins A, D, E, and B-complex vitamins, as well as calcium, phosphorus, magnesium, and potassium, are vital for pets' overall health, growth, and vitality. These nutrients play key roles in metabolic processes, immune function, bone health, and more."
+      },
+      {
+        "Hydration": "Adequate water intake is crucial for pets to prevent dehydration, support digestion, regulate body temperature, and flush out toxins. Provide access to clean, fresh water at all times, and consider wet or canned food options, which have higher moisture content than dry kibble."
+      },
+      {
+        "Avoidance of Harmful Ingredients": "Read pet food labels carefully and avoid products containing harmful additives, preservatives, artificial colors, flavors, and by-products. Look for natural, whole-food ingredients and avoid foods with fillers, grains, and ingredients your pet may be allergic or intolerant to."
+      },
+      {
+        "Consultation with Veterinarian": "It's essential to consult with a veterinarian or qualified animal nutritionist to develop a nutrition plan tailored to your pet's individual needs, health status, and lifestyle. They can provide personalized recommendations, address any dietary concerns or restrictions, and monitor your pet's progress over time. Regular check-ups and nutritional assessments are essential to ensure your pet's diet remains balanced and supportive of their overall health and longevity."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "serviceName": "Pet vaccination ",
+    "serviceDetails": "Like people, pets need vaccines. And pet vaccinations, like those for humans, may sometimes require a booster to keep them effective. The best way to stay on schedule with vaccinations for your dog or cat is to follow the recommendations of a veterinarian you trust.  Chances are your vet's suggestions will break down into two categories: core pet vaccines and non-core vaccines. Core pet vaccinations are those recommended for every pet, while non-core vaccines may be advised based on your pet's lifestyle. For example, your vet may suggest certain non-core vaccinations if your cat or dog is outdoors only or boarded often.  Many vaccines can be given to pets as young as 6 weeks old, so talk to your vet about setting up the best vaccination schedule for your cat or dog, kitten or puppy.",
+    "serviceImage": "https://cdni.iconscout.com/illustration/premium/thumb/vet-doctor-giving-vaccine-to-dog-5311473-4453526.png?f=webp",
+    "servicesInDepth": [
+      {
+        "Recommended vaccines ": "Depending on where you live, some infections may be more or less likely. The range of vaccines available includes rabies, distemper, adenovirus (infectious canine hepatitis), parvovirus, leptospirosis, parainfluenza, coronavirus, Bordetella bronchiseptica, Lyme disease, and canine influenza (for details on these diseases, see individual handouts “Rabies in Dogs”, “Distemper in Dogs”, “Infectious Hepatitis (Adenovirus) in Dogs”, “Parvovirus in Dogs”, “Leptospirosis in Dogs”, “Kennel Cough or Tracheobronchitis in Dogs”, “Lyme Disease in Dogs”, and “Canine Influenza – The Dog Flu”)."
+      },
+      {
+        "Maternal Immunity": "Newborn animals have not yet had a chance to make their own immunity so they need protection against infections present in their environment. They receive this immunity from their mother, as maternal antibodies. Part of this passive immunity is transferred across the placenta while the pup is still in the uterus, but most of it is transferred in the first milk or colostrum. This maternal immunity is only temporary and declines steadily over the first few weeks of life, largely gone by twelve weeks. The rate of decline is variable, depending on many factors."
+      },
+      {
+        "How much vaccines needed": "First, without complicated testing, it is impossible to know when a puppy has lost the passive protection it gets from its mother. An early decline in a puppy's maternal antibody can leave it susceptible to infection at a very young age. A strong maternal immunity can actually interfere with early vaccination (see handout “Vaccination Failure in Dogs”). Second, particularly with killed vaccines, the first dose is a priming dose, and the second dose boosts the response to a higher, longer-lasting level of immunity."
+      },
+      {
+        "Revaccinated": "In most properly vaccinated dogs, the immunity should last more than one year, and often several years. However, immunity does decline with time and this decline rate varies between individuals. To maintain the best protection against infectious diseases, revaccinations have proven very successful. As vaccines are improved over time, some do not need to be given as often, depending on individual circumstances. Most dogs with low-risk lifestyles can be vaccinated every three years with the core vaccines and as needed for any non-core vaccines (most non-core vaccines require annual boosters). Your veterinarian will discuss the need and frequency of booster vaccinations for your dog based on your dog’s needs and lifestyle."
+      },
+      {
+        "produce immunity": "Within a few hours of vaccination, the earliest phases of the immune response are being stimulated. It usually requires 10 to 14 days before a reasonable level of protection is established. Killed vaccines may not provide adequate protection until after the second dose. In young puppies, maternal antibodies may hinder protection until later in the vaccine series. Therefore, it is advisable to keep even a vaccinated puppy away from dogs or puppies of unknown vaccination history until it has finished its vaccination course."
+      },
+      {
+        "vaccination make my dog sick": "Some dogs develop mild lethargy or soreness one to two days after vaccination. In the case of killed vaccines containing an adjuvant, lump formation may occur at the vaccination site. If this is painful or persists for more than a few weeks with no decrease in size, consult your veterinarian. A few dogs will develop more severe reactions that are forms of hypersensitivity (allergy). The effects will usually occur within minutes but may be delayed by a few hours. Your dog may salivate, vomit, develop diarrhea, hives, or have difficulty breathing. Should this occur, consult your veterinarian immediately."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "serviceName": "Pet Insurance",
+    "serviceDetails": "Pet insurance is an insurance policy bought by a pet owner which helps to lessen the overall costs of expensive veterinary bills. This coverage is similar to health insurance policies for humans. Pet insurance will cover, either entirely or in part, the often expensive veterinary procedures. Evaluating and comparing pet insurance plans is necessary in order to find the right plan for you. As with human health insurance, there is usually a deductible, which is an out-of-pocket expense before the coverage begins. Most providers will base the amount of the insurance premium on the average cost of veterinary care in the owner's region. Also, the policy may not cover all veterinary procedures.",
+    "serviceImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_97uYCB7A3JNhRdoUG3hAv2TYFGkVslQaUNlK5jXUzt9Swz2OMkIGUL5VQtf-wb2hZk&usqp=CAU",
+    "servicesInDepth": [
+      {
+        "Basic coverage": "is the least expensive option. Basic coverage provides the lowest reimbursements for procedures, and will help pay for accidental injuries, poisonings and illnesses (including cancer). These policies typically include an annual deductible, caps on reimbursements per accident or illness, as well as caps on total reimbursements per policy term."
+      },
+      {
+        "Comprehensive coverage": "is costlier than basic coverage, but offers more generous benefits, such as reimbursements for accidental injuries, emergencies and illnesses, and coverage for office visits, prescriptions, diagnostic tests, X-rays and lab fees. These policies feature lower annual deductibles than those for basic coverage, but also cap reimbursements per accident and illness, as well as on total reimbursements for the policy term."
+      },
+      {
+        "Pet well care protection": "reimburses for preventive care, including physical exams, flea and heartworm prevention and vaccinations. While there is no deductible for well care, there is a nominal deductible for other medical services."
+      },
+      {
+        "Liability": "If your dog bites someone and causes an injury, and you are sued, your homeowners or renters insurance policies provide liability protection to defend you in court."
+      },
+      {
+        "Personal property": "Some owners tend to spend a lot of money accessorizing their pets—and these items are covered under the personal property section of standard homeowners and renters policies. So if Fido's favorite cashmere dog coat is stolen or damaged, you're covered!"
+      }
+    ]
+  }
+]

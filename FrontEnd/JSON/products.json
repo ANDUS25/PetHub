@@ -1,0 +1,286 @@
+[
+  {
+    "id": 1,
+    "Headline": "Food",
+    "item": [
+      {
+        "id": 1,
+        "Name": "Dog Food",
+        "CompanyName": "PetHub",
+        "Price": 599,
+        "Size": [
+          {
+            "Package": "S",
+            "Available": "Yes",
+            "SizeInKG": "1Kg",
+            "Age": "up to 6 Months",
+            "Weight": "10 to 12 KG"
+          },
+          {
+            "Package": "M",
+            "Available": "Yes",
+            "SizeInKG": "2Kg"
+          },
+          {
+            "Package": "L",
+            "Available": "Yes",
+            "SizeInKG": "3Kg"
+          },
+          {
+            "Package": "XL",
+            "Available": "No",
+            "SizeInKG": "4Kg"
+          },
+          {
+            "Package": "XXL",
+            "Available": "Yes",
+            "SizeInKG": "5Kg"
+          }
+        ],
+        "Discount": "Get 5% Extra Discount",
+        "Offer": "Save 10%",
+        "InStock": "Sold Out",
+        "Image": "https://images.pexels.com/photos/6568942/pexels-photo-6568942.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "10"
+      },
+      {
+        "id": 2,
+        "Name": "Wet Food",
+        "CompanyName": "Royal Canin",
+        "Price": 999,
+        "Size": [
+          {
+            "Package": "S",
+            "Available": "Yes",
+            "SizeInKG": "1Kg"
+          },
+          {
+            "Package": "M",
+            "Available": "No",
+            "SizeInKG": "2Kg"
+          },
+          {
+            "Package": "L",
+            "Available": "No",
+            "SizeInKG": "3Kg"
+          },
+          {
+            "Package": "XL",
+            "Available": "No",
+            "SizeInKG": "4Kg"
+          },
+          {
+            "Package": "XXL",
+            "Available": "No",
+            "SizeInKG": "5Kg"
+          }
+        ],
+        "Discount": "Get 10% Extra Discount",
+        "Offer": "Save 10%",
+        "InStock": "Yes",
+        "Image": "https://images.pexels.com/photos/906054/pexels-photo-906054.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "5"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "Headline": "Bed",
+    "item": [
+      {
+        "id": 1,
+        "Name": "Moon Bed",
+        "CompanyName": "M-Pets",
+        "Price": 2599,
+        "Size": [
+          {
+            "Package": "S",
+            "Available": "Yes",
+            "SizeInKG": "1Kg"
+          },
+          {
+            "Package": "M",
+            "Available": "Yes",
+            "SizeInKG": "2Kg"
+          }
+        ],
+        "Discount": "Get 15% Extra Discount",
+        "Offer": "Save 25%",
+        "InStock": "Sold Out",
+        "Image": "https://images.pexels.com/photos/11060015/pexels-photo-11060015.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "15"
+      },
+      {
+        "id": 2,
+        "Name": "Fofos Foam Bed",
+        "CompanyName": "FOFOS",
+        "Price": 1791,
+        "Size": [
+          {
+            "Package": "S",
+            "Available": "Yes",
+            "SizeInKG": "1Kg"
+          },
+          {
+            "Package": "M",
+            "Available": "No",
+            "SizeInKG": "2Kg"
+          },
+          {
+            "Package": "L",
+            "Available": "No",
+            "SizeInKG": "3Kg"
+          },
+          {
+            "Package": "XL",
+            "Available": "No",
+            "SizeInKG": "4Kg"
+          },
+          {
+            "Package": "XXL",
+            "Available": "No",
+            "SizeInKG": "5Kg"
+          }
+        ],
+        "Discount": "Get 10% Extra Discount",
+        "Offer": "Save 10%",
+        "InStock": "Yes",
+        "Image": "https://images.pexels.com/photos/1139795/pexels-photo-1139795.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "20"
+      },
+      {
+        "id": 3,
+        "Name": "Love Leaf Bed",
+        "CompanyName": "FOFOS",
+        "Price": 1791,
+        "Size": [
+          {
+            "Package": "L",
+            "Available": "No",
+            "SizeInKG": "3Kg"
+          },
+          {
+            "Package": "XL",
+            "Available": "No",
+            "SizeInKG": "4Kg"
+          },
+          {
+            "Package": "XXL",
+            "Available": "No",
+            "SizeInKG": "5Kg"
+          }
+        ],
+        "Discount": "",
+        "Offer": "Save 10%",
+        "InStock": "Yes",
+        "Image": "https://images.pexels.com/photos/2061057/pexels-photo-2061057.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "2"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "Headline": "Accessories",
+    "item": [
+      {
+        "id": 1,
+        "Name": "Trixie Harness",
+        "CompanyName": "Trixie",
+        "Price": 299,
+        "Size": [
+          {
+            "Package": "S",
+            "Available": "Yes",
+            "SizeInKG": "1Kg"
+          },
+          {
+            "Package": "M",
+            "Available": "Yes",
+            "SizeInKG": "2Kg"
+          }
+        ],
+        "Discount": "Get 15% Extra Discount",
+        "Offer": "Save 5%",
+        "InStock": "Sold Out",
+        "Image": "https://images.pexels.com/photos/9700137/pexels-photo-9700137.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "15"
+      },
+      {
+        "id": 2,
+        "Name": "Kurgo Dog Leash",
+        "CompanyName": "Kurgo",
+        "Price": 1799,
+        "Size": [
+          {
+            "Package": "S",
+            "Available": "Yes",
+            "SizeInKG": "1Kg"
+          },
+          {
+            "Package": "M",
+            "Available": "No",
+            "SizeInKG": "2Kg"
+          },
+          {
+            "Package": "L",
+            "Available": "No",
+            "SizeInKG": "3Kg"
+          },
+          {
+            "Package": "XL",
+            "Available": "No",
+            "SizeInKG": "4Kg"
+          },
+          {
+            "Package": "XXL",
+            "Available": "No",
+            "SizeInKG": "5Kg"
+          }
+        ],
+        "Discount": "Get 10% Extra Discount",
+        "Offer": "Save 50%",
+        "InStock": "Yes",
+        "Image": "https://images.pexels.com/photos/1139795/pexels-photo-1139795.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "14"
+      },
+      {
+        "id": 3,
+        "Name": "GPS and barcode",
+        "CompanyName": "ITPC",
+        "Price": 1799,
+        "Size": [
+          {
+            "Package": "S",
+            "Available": "Yes",
+            "SizeInKG": "1Kg"
+          },
+          {
+            "Package": "M",
+            "Available": "No",
+            "SizeInKG": "2Kg"
+          },
+          {
+            "Package": "L",
+            "Available": "No",
+            "SizeInKG": "3Kg"
+          },
+          {
+            "Package": "XL",
+            "Available": "No",
+            "SizeInKG": "4Kg"
+          },
+          {
+            "Package": "XXL",
+            "Available": "No",
+            "SizeInKG": "5Kg"
+          }
+        ],
+        "Discount": "Get 10% Extra Discount",
+        "Offer": "Save 20%",
+        "InStock": "Yes",
+        "Image": "https://images.pexels.com/photos/1139795/pexels-photo-1139795.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Quantity": "14"
+      }
+    ]
+  }
+]

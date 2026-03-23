@@ -1,0 +1,453 @@
+[
+  {
+    "category": "Cat",
+    "products": [
+      {
+        "petName": "Food",
+        "items": [
+          "Milk",
+          "Fish",
+          "Cooked beef",
+          "chicken",
+          "turkey",
+          "small amounts of lean deli meats"
+        ]
+      }
+    ],
+    "breeds": [
+      {
+        "id": 1,
+        "petName": "Abyssinian Cat",
+        "color": [
+          "Ruddy",
+          "Red",
+          "Blue",
+          "Fawn"
+        ],
+        "lifespan": "9 to 15 years",
+        "info": "Abyssinians are highly intelligent and intensely inquisitive. They love to investigate and will leave no nook or cranny unexplored. They're sometimes referred to as “Aby-grabbys” because they tend to take things that grab their interest. The playful Aby loves to jump and climb. Keep a variety of toys on hand to keep her occupied, including puzzle toys that challenge her intelligence.",
+        "image": "https://images.pexels.com/photos/13986951/pexels-photo-13986951.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "facts": "Some call Abys “Cats from the Blue Nile”, elieving they're the sacred cat of Egyptian Pharaohs. Others believe the breed was created in Britain by crossing silver and brown tabbies with “ticked” coats. The Somali is a longhaired Abyssinian.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.pexels.com/photos/9830197/pexels-photo-9830197.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 2,
+            "path": "https://images.pexels.com/photos/3208624/pexels-photo-3208624.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 3,
+            "path": "https://images.pexels.com/photos/19165102/pexels-photo-19165102/free-photo-of-black-belgian-shepherd-dogs.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 4,
+            "path": "https://images.pexels.com/photos/10131779/pexels-photo-10131779.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 5,
+            "path": "https://images.pexels.com/photos/16447970/pexels-photo-16447970/free-photo-of-dog-posing-in-wild-nature-near-forest.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 6,
+            "path": "https://images.pexels.com/photos/20292579/pexels-photo-20292579/free-photo-of-an-australian-shepherd-standing-on-a-field-with-purple-heather.jpeg?auto=compress&cs=tinysrgb&w=600"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "petName": "American Bobtail Cat",
+        "color": [
+          "White",
+          "Black",
+          "Blue",
+          "Red",
+          "Cream",
+          "Chocolate",
+          "Lavender",
+          "Cinnamon",
+          "Fawn"
+        ],
+        "lifespan": "13 to 15 years",
+        "info": "The American Bobtail is an athletic breed that looks like a bobtailed wildcat and has many dog-like tendencies.",
+        "image": "https://images.pexels.com/photos/20331909/pexels-photo-20331909/free-photo-of-close-up-of-ginger-cat.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "facts": "The American Bobtail has a naturally short bobtail that can be seen clearly above the back when she is alert. No tail is exactly the same, but the average length is 1 to 4 inches. American Bobtails make excellent therapy pets. Bobtails are slow to mature, taking two to three years to reach adult size.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.pexels.com/photos/9830197/pexels-photo-9830197.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 2,
+            "path": "https://images.pexels.com/photos/3208624/pexels-photo-3208624.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 3,
+            "path": "https://images.pexels.com/photos/19165102/pexels-photo-19165102/free-photo-of-black-belgian-shepherd-dogs.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 4,
+            "path": "https://images.pexels.com/photos/10131779/pexels-photo-10131779.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 5,
+            "path": "https://images.pexels.com/photos/16447970/pexels-photo-16447970/free-photo-of-dog-posing-in-wild-nature-near-forest.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 6,
+            "path": "https://images.pexels.com/photos/20292579/pexels-photo-20292579/free-photo-of-an-australian-shepherd-standing-on-a-field-with-purple-heather.jpeg?auto=compress&cs=tinysrgb&w=600"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "petName": "American Shorthair Cat",
+        "color": [
+          "White",
+          "Black",
+          "Blue",
+          "Red",
+          "Cream",
+          "Silver"
+        ],
+        "lifespan": "15 to 20 years",
+        "info": "Formerly used to keep rodents and vermin away from food stores, the American Shorthair still enjoys exercising her hunting skills on unsuspecting insects. As a smart, moderately active feline, she enjoys learning tricks and challenging her intelligence with puzzles and interactive toys.",
+        "image": "https://images.pexels.com/photos/15926554/pexels-photo-15926554/free-photo-of-a-domestic-cat-with-brown-eyes-sitting-and-looking-away.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "facts": "American Curl kittens are born with straight ears that begin to curl backward after three to five days.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.pexels.com/photos/9830197/pexels-photo-9830197.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 2,
+            "path": "https://images.pexels.com/photos/3208624/pexels-photo-3208624.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 3,
+            "path": "https://images.pexels.com/photos/19165102/pexels-photo-19165102/free-photo-of-black-belgian-shepherd-dogs.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 4,
+            "path": "https://images.pexels.com/photos/10131779/pexels-photo-10131779.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 5,
+            "path": "https://images.pexels.com/photos/16447970/pexels-photo-16447970/free-photo-of-dog-posing-in-wild-nature-near-forest.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 6,
+            "path": "https://images.pexels.com/photos/20292579/pexels-photo-20292579/free-photo-of-an-australian-shepherd-standing-on-a-field-with-purple-heather.jpeg?auto=compress&cs=tinysrgb&w=600"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "petName": "American Curl Cat",
+        "color": [
+          "White",
+          "Black",
+          "Blue",
+          "Red",
+          "Cream",
+          "Chocolate",
+          "Lilac",
+          "Silver",
+          "Golden"
+        ],
+        "lifespan": "13+ years",
+        "info": "With unique ears that curl back, and an inquisitive expression reminiscent of happy surprise, the American Curl brings a smile to everyone who meets her.",
+        "image": "https://images.pexels.com/photos/7542169/pexels-photo-7542169.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "facts": "The breed wasn’t called “American Shorthair until 1966, when it was given the name to distinguish it from other domestic shorthairs and random-bred shorthairs. Because they resemble so many other domestic shorthair cats, the only way to know yours is American is with certified breed papers. An American Shorthair was named CFA’s “Cat of the Year” in 1965, 1984 and 1996.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.pexels.com/photos/9830197/pexels-photo-9830197.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 2,
+            "path": "https://images.pexels.com/photos/3208624/pexels-photo-3208624.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 3,
+            "path": "https://images.pexels.com/photos/19165102/pexels-photo-19165102/free-photo-of-black-belgian-shepherd-dogs.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 4,
+            "path": "https://images.pexels.com/photos/10131779/pexels-photo-10131779.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 5,
+            "path": "https://images.pexels.com/photos/16447970/pexels-photo-16447970/free-photo-of-dog-posing-in-wild-nature-near-forest.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 6,
+            "path": "https://images.pexels.com/photos/20292579/pexels-photo-20292579/free-photo-of-an-australian-shepherd-standing-on-a-field-with-purple-heather.jpeg?auto=compress&cs=tinysrgb&w=600"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Dog",
+    "products": [
+      {
+        "petName": "Food",
+        "items": [
+          "Meat",
+          "Plant base food"
+        ]
+      }
+    ],
+    "breeds": [
+      {
+        "id": 1,
+        "petName": "Alaskan Malamute Dog",
+        "color": [
+          "White",
+          "Grey & white",
+          "Black & white",
+          "Red & white",
+          "Seal & white",
+          "Silver & white",
+          "Sable & white",
+          "Blue & white",
+          "Agouti & white"
+        ],
+        "Lifespan": " 10 to 14 years",
+        "info": "As Alaskan Malamutes originate from the Arctics, they are accustomed to thriving in freezing temperatures. These adorable wolf look-a-likes are full of energy and can light up a room with their friendly nature and playful personality. For those who love to travel, go on escapades, or indulge in day-to-day physical activities, the Alaskan Malamute can make for a great furry partner. These dogs love exercising and putting their strong muscled bodies to use. Hence, if you are worried about adopting a pet due to your adventurous lifestyle, this dog breed fits right into your world.",
+        "image": "https://images.pexels.com/photos/12190803/pexels-photo-12190803.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Facts": "Alaskan Malamutes, just like their cousins, Siberian Huskies, are one of the most ancient Arctic breeds on this planet. They were bred to be sled dogs, to pull heavy weights across long distances. Indigenous tribes such as The Mahlemuts and other people that migrated from Siberia to Alaska used Alaskan Malamutes for hauling heavy weights, hunting seals, and more. The American Kennel Club recognized this breed in the year 1935 and in the same year, The Alaskan Malamute Club of America was formed: to help breed these magical beasts.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.pexels.com/photos/9830197/pexels-photo-9830197.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 2,
+            "path": "https://images.pexels.com/photos/3208624/pexels-photo-3208624.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 3,
+            "path": "https://images.pexels.com/photos/19165102/pexels-photo-19165102/free-photo-of-black-belgian-shepherd-dogs.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 4,
+            "path": "https://images.pexels.com/photos/10131779/pexels-photo-10131779.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 5,
+            "path": "https://images.pexels.com/photos/16447970/pexels-photo-16447970/free-photo-of-dog-posing-in-wild-nature-near-forest.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 6,
+            "path": "https://images.pexels.com/photos/20292579/pexels-photo-20292579/free-photo-of-an-australian-shepherd-standing-on-a-field-with-purple-heather.jpeg?auto=compress&cs=tinysrgb&w=600"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "petName": "Belgian Shepherd",
+        "color": [
+          "White",
+          "Grey & white",
+          "Black & white",
+          "Red & white",
+          "Seal & white",
+          "Silver & white",
+          "Sable & white",
+          "Blue & white",
+          "Agouti & white"
+        ],
+        "Lifespan": " 12 to 15 years",
+        "info": "The Belgian Shepherd Dog is unique in the world of dogs as it is the only breed to have four separate varieties. Structurally they are all the same and differ only in coat and colour. There is the long coated black - the Groenendael, the long coated other than black - the Tervueren, the short coated - the Malinois and the rough coated - the Laekenois.        First recognised as a breed in 1891, the Belgian Shepherd Dog was originally bred to herd sheep and is a medium-sized dog that is accustomed to the open-air life and built to resist the cold Belgian climate.",
+        "image": "https://images.pexels.com/photos/18079834/pexels-photo-18079834/free-photo-of-shepherd-dog-in-yard.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Facts": "The Belgian Shepherd Dog forms strong bonds with its owner and so is more sensitive to its owner’s needs. Therefore a Belgian needs to ‘live with’ its family rather than in isolation somewhere in the grounds or left in the house alone for many hours a day. If the dog has to spend a lot of time on its own it might benefit from a companion.        When investigating the purchase of a Belgian Shepherd Dog care needs to be taken to ensure that all breeding stock has been X-rayed for Hip Dysplasia and are suitable for breeding. Viewing the parents of your potential puppy is an excellent idea as it can give an idea of what your puppy may possibly develop into. It is also extremely important to socialise your puppy with people, dogs, other animals and as many different situations as possible to ensure a well-adjusted and happy pet.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.pexels.com/photos/9830197/pexels-photo-9830197.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 2,
+            "path": "https://images.pexels.com/photos/3208624/pexels-photo-3208624.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 3,
+            "path": "https://images.pexels.com/photos/19165102/pexels-photo-19165102/free-photo-of-black-belgian-shepherd-dogs.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 4,
+            "path": "https://images.pexels.com/photos/10131779/pexels-photo-10131779.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 5,
+            "path": "https://images.pexels.com/photos/16447970/pexels-photo-16447970/free-photo-of-dog-posing-in-wild-nature-near-forest.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 6,
+            "path": "https://images.pexels.com/photos/20292579/pexels-photo-20292579/free-photo-of-an-australian-shepherd-standing-on-a-field-with-purple-heather.jpeg?auto=compress&cs=tinysrgb&w=600"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bird",
+    "products": [
+      {
+        "petName": "Food",
+        "items": [
+          "Guava",
+          "Chilli",
+          "Grass",
+          "Insects",
+          "Rodents",
+          "Nectar",
+          "Worms",
+          "Fruits"
+        ]
+      }
+    ],
+    "breeds": [
+      {
+        "id": 1,
+        "petName": "Parrot",
+        "color": [
+          "Grey",
+          "White",
+          "Yellow"
+        ],
+        "Lifespan": "Up to 20 years",
+        "info": "Cuddly, outgoing, and comical are just three reasons why the cockatiel is the No. 1 pet bird in America. Cockatiels are also talented whistlers, and male cockatiels in particular are known for their whistle serenades, which can be directed at their favored person, their favorite object or their mirror reflection. When not whistling or keeping themselves busy foraging for food and fun around the cage, cockatiels often enjoy spending their downtime snuggling on their favored person's shoulder. A healthy, well-socialized cockatiel can make a great family pet and is also ideal for apartment living.",
+        "image": "https://images.pexels.com/photos/10252685/pexels-photo-10252685.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "Facts": "Cockatiels are active birds and need a spacious cage. We recommend getting the largest cage you can afford and fit in your home—something around 18 inches high by 18 inches wide suits a single cockatiel. Place the cage in an area with lots of natural light, like near a window. Cockatiels need 10-12 hours of daylight per day. Avoid direct sunlight, though, as it can overheat the cage. An ideal spot is near an east- or west-facing window. You'll want multiple perches at different levels in the cage so your cockatiel can move around. Include some toys to keep them entertained when alone, such as swings, ropes, and puzzle toys with treats. Be sure any toys are bird-safe.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.pexels.com/photos/9830197/pexels-photo-9830197.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 2,
+            "path": "https://images.pexels.com/photos/3208624/pexels-photo-3208624.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 3,
+            "path": "https://images.pexels.com/photos/19165102/pexels-photo-19165102/free-photo-of-black-belgian-shepherd-dogs.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 4,
+            "path": "https://images.pexels.com/photos/10131779/pexels-photo-10131779.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 5,
+            "path": "https://images.pexels.com/photos/16447970/pexels-photo-16447970/free-photo-of-dog-posing-in-wild-nature-near-forest.jpeg?auto=compress&cs=tinysrgb&w=600"
+          },
+          {
+            "id": 6,
+            "path": "https://images.pexels.com/photos/20292579/pexels-photo-20292579/free-photo-of-an-australian-shepherd-standing-on-a-field-with-purple-heather.jpeg?auto=compress&cs=tinysrgb&w=600"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Fish",
+    "products": [
+      {
+        "petName": "Food",
+        "items": [
+          "eggs",
+          "algae",
+          "plants",
+          "crustaceans",
+          "worms",
+          "mollusks",
+          "insects",
+          "insect larvae",
+          "amphibians",
+          "plankton"
+        ]
+      }
+    ],
+    "breeds": [
+      {
+        "id": 1,
+        "petName": "Anchovy",
+        "color": [
+          "Silver",
+          "Blue",
+          "Green",
+          "Yellowish",
+          "Whitish"
+        ],
+        "Lifespan": "3 to 4 years in the wild",
+        "info": "Anchovies are small, silver-blue fish known for their distinctively salty and savory flavor. They inhabit temperate waters worldwide, forming large schools in coastal and open seas. Feeding primarily on plankton and tiny organisms, anchovies play a crucial role in marine food webs as prey for larger fish, seabirds, and marine mammals. Reproducing through spawning, they release eggs into the water, where they hatch into larvae and mature into juvenile fish. Commercially, anchovies are prized for their flesh, used fresh, salted, or processed into various products like anchovy paste and canned fillets. Culinary traditions worldwide incorporate anchovies into dishes, adding depth of flavor to salads, pasta sauces, and pizzas. Rich in protein, omega-3 fatty acids, vitamins, and minerals, anchovies offer health benefits and are valued for their nutritional content. However, overfishing and habitat degradation threaten anchovy populations, highlighting the importance of sustainable fishing practices and marine conservation efforts.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK3R4mocMO79fCN2mTxCksJxC3xlJaki_hZw&s",
+        "Facts": "Anchovies are small, oily fish that pack a powerful punch of flavor and nutrition. Rich in protein, omega-3 fatty acids, vitamins, and minerals, they offer numerous health benefits, including support for heart health and overall well-being. Despite their small size, anchovies are big on taste, thanks to their intense, umami-rich flavor profile. They are widely used in Mediterranean cuisine, adding depth and complexity to dishes like pasta sauces, salads, pizzas, and appetizers. Preserved through methods like salting, curing, or fermentation, anchovies are versatile ingredients available in various forms, such as paste or fillets packed in oil. However, sustainable fishing practices are crucial to ensure the continued abundance of anchovy populations and the health of marine ecosystems. Throughout history, anchovies have played a significant role in culinary traditions and cultural celebrations, highlighting their enduring popularity and cultural significance.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKQGvAkmEqOi8FQoeEkol5EPez3489tQniAA&s"
+          },
+          {
+            "id": 2,
+            "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKnQxcPHpOTkjAmx3_BXAO_7K2Kxay72b4g&s"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "petName": "Barracuda",
+        "color": [
+          "Silver",
+          "Gray",
+          "Blue"
+        ],
+        "lifespan": "10 to 15 years",
+        "info": "Barracudas are long, sleek fish known for their formidable appearance and swift swimming abilities. They inhabit tropical and subtropical oceans worldwide, often found in coastal regions, coral reefs, and open waters. With their sharp teeth and streamlined bodies, barracudas are formidable predators, preying on smaller fish and crustaceans. They rely on ambush tactics and bursts of speed to capture their prey, making them apex predators in their marine ecosystems. Despite their ferocious reputation, barracudas are generally shy and avoid confrontations with humans. However, caution is advised when swimming or diving in areas where barracudas are present, as they may perceive humans as potential threats and act defensively. In some regions, barracudas are targeted by commercial and recreational fishermen for their meat and sport fishing opportunities.",
+        "image": "https://images.pexels.com/photos/13561336/pexels-photo-13561336.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "facts": "Barracudas are top predators in marine ecosystems, known for their speed, agility, and hunting prowess. They have a fearsome appearance, with long, slender bodies, sharp teeth, and powerful jaws. Barracudas are opportunistic feeders, consuming a variety of prey, including smaller fish, squid, and crustaceans. They are known for their rapid bursts of speed, capable of reaching speeds of up to 35 miles per hour. Despite their aggressive reputation, barracudas are generally shy and avoid humans unless provoked or threatened. However, caution is advised when swimming or diving in areas where barracudas are present, as they may mistake shiny objects or reflective surfaces for prey and bite defensively. Barracudas play a vital role in maintaining the balance of marine ecosystems by controlling populations of smaller fish and maintaining healthy reef ecosystems.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.unsplash.com/photo-1646798578579-12e2bcc5864b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QmFycmFjdWRhfGVufDB8fDB8fHww"
+          },
+          {
+            "id": 2,
+            "path": "https://images.unsplash.com/photo-1655105494376-97c8c1ac5d1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEJhcnJhY3VkYXxlbnwwfHwwfHx8MA%3D%3D"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "petName": "Bass",
+        "color": [
+          "Green",
+          "Brown",
+          "Olive",
+          "Silver"
+        ],
+        "lifespan": "10 to 20 years",
+        "info": "Bass are freshwater fish belonging to the genus Morone, which includes several species such as large-mouth bass, small-mouth bass, and striped bass. They are highly popular among anglers for their sporting qualities and delicious flesh. Bass inhabit various aquatic environments, including lakes, rivers, streams, and reservoirs, where they are known for their voracious feeding habits and aggressive strikes. Large-mouth bass are characterized by their large mouths and olive-green coloration, while small-mouth bass have smaller mouths and bronze or brown coloration. Striped bass, also known as rockfish, have distinctive stripes along their sides and inhabit coastal waters and estuaries. Bass feed primarily on smaller fish, crustaceans, insects, and other aquatic prey, using ambush tactics and stealth to capture their quarry. They are valued both for recreational fishing and as food fish, with many anglers pursuing bass for sport and culinary enjoyment.",
+        "image": "https://images.unsplash.com/photo-1521408691149-8a415fc3ef3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJhc3MlMjBmaXNofGVufDB8fDB8fHww",
+        "facts": "Bass are among the most sought-after game fish in North America, prized for their fighting ability and delicious flesh. Large-mouth bass, small-mouth bass, and striped bass are the most common species targeted by anglers, each offering unique challenges and rewards. Large-mouth bass are known for their explosive strikes and powerful runs, often found lurking in shallow waters near cover such as weeds, logs, and submerged structures. Small-mouth bass are renowned for their acrobatic leaps and strong fighting spirit, preferring clear, cool waters with rocky bottoms and swift currents. Striped bass are migratory fish that undertake long journeys along the coast, following schools of baitfish and staging dramatic feeding frenzies. Bass fishing techniques vary depending on the species and habitat, with anglers employing a wide range of lures, baits, and strategies to entice these elusive predators. Conservation efforts are underway to protect and preserve bass populations, ensuring the continued enjoyment of bass fishing for future generations.",
+        "collection": [
+          {
+            "id": 1,
+            "path": "https://images.unsplash.com/photo-1516481667260-32252506d84c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFzcyUyMGZpc2h8ZW58MHx8MHx8fDA%3D"
+          },
+          {
+            "id": 2,
+            "path": "https://images.unsplash.com/photo-1567517412043-7b2c07aa08f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGJhc3MlMjBmaXNofGVufDB8fDB8fHww"
+          },
+          {
+            "id": 3,
+            "path": "https://images.unsplash.com/photo-1521408691149-8a415fc3ef3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJhc3MlMjBmaXNofGVufDB8fDB8fHww"
+          }
+        ]
+      }
+    ]
+  }
+]

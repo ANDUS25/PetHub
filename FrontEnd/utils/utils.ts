@@ -1,0 +1,42 @@
+import {ToastAndroid} from 'react-native';
+
+var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+var mailFormat =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+const specialChar = text => {
+  if (text.match(format)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const hasaWhiteSpace = text => {
+  return /\s/.test(text);
+};
+
+const validationLength = (text, number) => {
+  return text.length < number ? true : false;
+};
+
+const emailValidation = text => {
+  return text.match(mailFormat) ? true : false;
+};
+
+const toast = text => {
+  ToastAndroid.show(text, ToastAndroid.SHORT);
+};
+
+const valueIsEmpty = text => {
+  return text.trim() === '' ? true : false;
+};
+
+export {
+  hasaWhiteSpace,
+  specialChar,
+  validationLength,
+  emailValidation,
+  toast,
+  valueIsEmpty,
+};
