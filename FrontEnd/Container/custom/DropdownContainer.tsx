@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Dimensions, TextInput, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import Colors from '../../utils/Colors';
@@ -6,17 +6,27 @@ import Colors from '../../utils/Colors';
 const { width, height } = Dimensions.get('window');
 
 interface DropdownContainerInterface {
-  data:string[];
-  onChange:()=>void;
-  itemTextStyle:TextInput<style>;
-  style;
-  itemContainerStyle;
-  containerStyle;
-  placeholder:string;
-  selectedTextStyle;
+  data: string[];
+  onChange: () => void;
+  itemTextStyle: any;
+  style: any;
+  itemContainerStyle: any;
+  containerStyle: any;
+  placeholder: string;
+  selectedTextStyle: any;
 }
 
-const DropdownContainer = () => {
+const DropdownContainer: FC<DropdownContainerInterface> = ({ ...props }) => {
+  const {
+    containerStyle,
+    data,
+    itemContainerStyle,
+    itemTextStyle,
+    onChange,
+    placeholder,
+    selectedTextStyle,
+    style,
+  } = props;
   return (
     <View>
       <Dropdown

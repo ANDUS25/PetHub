@@ -11,7 +11,6 @@ import { store } from './store/store.js';
 const Stack = createNativeStackNavigator();
 
 function App() {
-  // const { user } = UseAuth();
   return (
     <Provider store={store}>
       <NavigationContainer>

@@ -1,11 +1,13 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { FC } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { Bars3Icon, ChevronLeftIcon } from 'react-native-heroicons/outline';
 import { useSelector } from 'react-redux';
 import Colors from '../utils/Colors';
+import { GlobalAppTheme } from '../utils/CommonUtils';
+import { HeaderProps } from '../utils/Interface';
 
-const Header = ({ back, header, Drawer }) => {
+const Header: FC<HeaderProps> = ({ back, header, Drawer }) => {
   const theme = useSelector(state => state.ThemeReducer.value);
   const Navigation = useNavigation();
 
@@ -16,10 +18,15 @@ const Header = ({ back, header, Drawer }) => {
           onPress={() => Navigation.goBack()}
           className="rounded-md p-2"
           style={{
-            backgroundColor: theme === 'light' ? Colors.BUTTON_DARK : '#B4D4FF',
-          }}>
+            backgroundColor: GlobalAppTheme(
+              theme,
+              Colors.BUTTON_DARK,
+              Colors.INACTIVE_TAB_BACKGROUND,
+            ),
+          }}
+        >
           <ChevronLeftIcon
-            color={theme === 'light' ? Colors.WHITE : Colors.BLACK}
+            color={GlobalAppTheme(theme, Colors.WHITE, Colors.BLACK)}
             size={28}
           />
         </TouchableOpacity>
@@ -30,8 +37,9 @@ const Header = ({ back, header, Drawer }) => {
       <Text
         className="text-2xl"
         style={{
-          color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-        }}>
+          color: GlobalAppTheme(theme, Colors.BLACK, Colors.WHITE),
+        }}
+      >
         {header}
       </Text>
 
@@ -40,10 +48,15 @@ const Header = ({ back, header, Drawer }) => {
           onPress={() => Navigation.openDrawer()}
           className="rounded-md p-2"
           style={{
-            backgroundColor: theme === 'light' ? Colors.BUTTON_DARK : '#B4D4FF',
-          }}>
+            backgroundColor: GlobalAppTheme(
+              theme,
+              Colors.BUTTON_DARK,
+              Colors.INACTIVE_TAB_BACKGROUND,
+            ),
+          }}
+        >
           <Bars3Icon
-            color={theme === 'light' ? Colors.WHITE : Colors.BLACK}
+            color={GlobalAppTheme(theme, Colors.WHITE, Colors.BLACK)}
             size={28}
           />
         </TouchableOpacity>

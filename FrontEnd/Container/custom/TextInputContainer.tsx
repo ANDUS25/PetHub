@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { TextInput } from 'react-native';
-import { TextInputContainer as TextInputContainerType } from '../../utils/Interface';
+import { TextInputContainerProps } from '../../utils/Interface';
 
-const TextInputContainer: FC<TextInputContainerType> = ({ ...props }) => {
+const TextInputContainer: FC<TextInputContainerProps> = ({ ...props }) => {
   const { placeholder, TextChange, style, className, placeHolderColor } = props;
 
   return (
