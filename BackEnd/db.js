@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Title } from "./utils/stings";
+import { Title } from "./src/utils/strings.js";
 
 const connectToDatabase = async () => {
   try {
