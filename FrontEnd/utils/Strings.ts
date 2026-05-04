@@ -7,6 +7,8 @@ const Title = {
   ONLY_SIGN: '/-',
   PAYMENT_SUCCESSFUL: 'Payment Successful',
   RUPEES_SYMBOL: '₹',
+  Success: 'Success',
+  SUBMIT: 'Submit',
   TOTAL_QUANTITY: 'Total quantity',
   WELCOME: 'Welcome',
   YES: 'Yes',

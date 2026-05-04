@@ -12,6 +12,7 @@ import {
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useSelector } from 'react-redux';
 import { HeaderContainer, TextInputContainer } from '../../Container/index';
+import { Title } from '../../utils/Strings';
 
 const ContactUs = () => {
   const Navigation = useNavigation();
@@ -31,7 +32,7 @@ const ContactUs = () => {
       userInputInfo.lName == '' ||
       userInputInfo.email == ''
     ) {
-      alert('please fill Names and Email at least');
+      Alert.alert('please fill Names and Email at least');
     } else {
       ToastAndroid.show('Thank You for your response', ToastAndroid.CENTER);
       setTimeout(() => {
@@ -42,10 +43,10 @@ const ContactUs = () => {
 
   const handleConfirmation = () => {
     Alert.alert('Want to Submit Data !!!', '', [
-      {text: 'Yes', onPress: OkHandler},
+      { text: 'Yes', onPress: OkHandler },
       {
         text: 'No',
-        onPress: () => {},
+        onPress: () => { },
         style: 'cancel',
       },
     ]);
@@ -81,7 +82,7 @@ const ContactUs = () => {
                 className="w-full p-3 rounded-2xl my-2"
                 style={Styles(theme).textInput}
                 TextChange={e =>
-                  setUserInputInfo(prev => ({...prev, fName: e}))
+                  setUserInputInfo(prev => ({ ...prev, fName: e }))
                 }
                 placeHolderColor={theme == 'light' ? 'white' : 'black'}
               />
@@ -90,7 +91,7 @@ const ContactUs = () => {
                 className="w-full p-3 rounded-2xl my-2"
                 style={Styles(theme).textInput}
                 TextChange={e =>
-                  setUserInputInfo(prev => ({...prev, lName: e}))
+                  setUserInputInfo(prev => ({ ...prev, lName: e }))
                 }
                 placeHolderColor={theme == 'light' ? 'white' : 'black'}
               />
@@ -99,7 +100,7 @@ const ContactUs = () => {
                 className="w-full p-3 rounded-2xl my-2"
                 style={Styles(theme).textInput}
                 TextChange={e =>
-                  setUserInputInfo(prev => ({...prev, email: e}))
+                  setUserInputInfo(prev => ({ ...prev, email: e }))
                 }
                 placeHolderColor={theme == 'light' ? 'white' : 'black'}
               />
@@ -107,7 +108,7 @@ const ContactUs = () => {
                 placeholder={'Subject'}
                 className="w-full p-3 rounded-2xl my-2"
                 TextChange={e =>
-                  setUserInputInfo(prev => ({...prev, subject: e}))
+                  setUserInputInfo(prev => ({ ...prev, subject: e }))
                 }
                 style={Styles(theme).textInput}
                 placeHolderColor={theme == 'light' ? 'white' : 'black'}
@@ -116,7 +117,7 @@ const ContactUs = () => {
                 placeholder={'Message'}
                 className="w-full p-3 rounded-2xl my-2"
                 TextChange={e =>
-                  setUserInputInfo(prev => ({...prev, message: e}))
+                  setUserInputInfo(prev => ({ ...prev, message: e }))
                 }
                 style={Styles(theme).textInput}
                 placeHolderColor={theme == 'light' ? 'white' : 'black'}
@@ -124,7 +125,7 @@ const ContactUs = () => {
             </View>
             <TouchableOpacity onPress={handleConfirmation}>
               <View className="flex flex-row justify-center mx-auto bg-blue-500 w-1/2 p-4 rounded-2xl mt-6">
-                <Text className="text-xl text-white">Submit</Text>
+                <Text className="text-xl text-white">{Title.SUBMIT}</Text>
               </View>
             </TouchableOpacity>
           </View>

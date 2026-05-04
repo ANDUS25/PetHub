@@ -133,12 +133,16 @@ const CartComponent = () => {
       />
 
       <TouchableOpacity
-        onPress={() => handlePayment()}
+        onPress={handlePayment}
         className="mx-2 rounded-xl"
         style={{
-          backgroundColor:
-            theme === AppTheme.LIGHT ? Colors.BUTTON_DARK   : Colors.BUTTON_LIGHT,
-        }}>
+          backgroundColor: GlobalAppTheme(
+            AppTheme.LIGHT,
+            Colors.BUTTON_DARK,
+            Colors.BUTTON_LIGHT,
+          ),
+        }}
+      >
         <View className="p-4 w-full ">
           <Text className="text-center text-lg text-white">{Title.CHECK_OUT}</Text>
         </View>
