@@ -1,11 +1,12 @@
-import crypto from "crypto";
-import jwt from "jsonwebtoken";
-import sessionModel from "../../models/session.model.js";
-import User from "../../models/user.model.js";
-import { Title } from "../../utils/strings.js";
-import { sendEmail } from "../../services/email.service.js";
-import { generateOtp, getMailContent } from "../../utils/commonUtils.js";
 import OTPModel from "../../models/otp.model.js";
+import User from "../../models/user.model.js";
+import { sendEmail } from "../../services/email.service.js";
+import {
+  createCryptoHash,
+  generateOtp,
+  getMailContent,
+} from "../../utils/commonUtils.js";
+import { Title } from "../../utils/strings.js";
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
@@ -23,10 +24,7 @@ const register = async (req, res) => {
   }
 
   // This is used for the hashing password
-  const hashPassword = await crypto
-    .createHash("sha256")
-    .update(password)
-    .digest("hex");
+  const hashPassword = await createCryptoHash(password);
 
   try {
     const newUser = await User.create({
@@ -38,7 +36,7 @@ const register = async (req, res) => {
     const otp = generateOtp();
     const otpHtmlContent = getMailContent(otp);
 
-    const otpHash = crypto.createHash("sha256").update(otp).digest("hex");
+    const otpHash = createCryptoHash(otp);
 
     await OTPModel.create({
       user: newUser._id,
@@ -48,8 +46,8 @@ const register = async (req, res) => {
 
     await sendEmail(
       email,
-      "OTP Verification",
-      "Welcome onboard",
+      Title.OTP_VERIFICATION,
+      Title.WELCOME_ONBOARD,
       otpHtmlContent,
     );
 

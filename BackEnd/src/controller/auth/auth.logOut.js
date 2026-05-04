@@ -1,6 +1,7 @@
 import crypto from "crypto";
 import { Title } from "../../utils/strings.js";
 import sessionModel from "../../models/session.model.js";
+import { createCryptoHash } from "../../utils/commonUtils.js";
 
 const logOut = async (req, res) => {
   const getRefreshToken = req.cookies?.refreshToken;
@@ -12,10 +13,7 @@ const logOut = async (req, res) => {
       });
     }
 
-    const decodeRefreshToken = await crypto
-      .createHash("sha256")
-      .update(getRefreshToken)
-      .digest("hex");
+    const decodeRefreshToken = await createCryptoHash(getRefreshToken);
 
     const session = await sessionModel.findOne({
       refreshTokenHash: decodeRefreshToken,

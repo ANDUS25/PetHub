@@ -3,6 +3,7 @@ import { Title } from "../../utils/strings.js";
 import crypto from "crypto";
 import sessionModel from "../../models/session.model.js";
 import jwt from "jsonwebtoken";
+import { createCryptoHash, signToken } from "../../utils/commonUtils.js";
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -24,10 +25,7 @@ const login = async (req, res) => {
       });
     }
 
-    const checkUserPassword = crypto
-      .createHash("sha256")
-      .update(password)
-      .digest("hex");
+    const checkUserPassword = createCryptoHash(password);
 
     if (!checkUserPassword) {
       return res.status(401).json({
@@ -36,18 +34,9 @@ const login = async (req, res) => {
       });
     }
 
-    const refreshToken = jwt.sign(
-      { id: userInfo._id },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "7d",
-      },
-    );
+    const refreshToken = signToken({ id: userInfo._id }, "7d");
 
-    const refreshTokenHash = crypto
-      .createHash("sha256")
-      .update(refreshToken)
-      .digest("hex");
+    const refreshTokenHash = createCryptoHash(refreshToken);
 
     const session = await sessionModel.create({
       user: userInfo._id,
@@ -56,13 +45,12 @@ const login = async (req, res) => {
       userAgent: req.headers["user-agent"],
     });
 
-    const accessToken = jwt.sign(
+    const accessToken = signToken(
       {
         id: userInfo._id,
         sessionId: session.id,
       },
-      process.env.JWT_SECRET,
-      { expiresIn: "15m" },
+      "15m",
     );
 
     res.cookie("refreshToken", refreshToken, {

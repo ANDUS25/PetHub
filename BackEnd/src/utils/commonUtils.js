@@ -82,4 +82,22 @@ const getMailContent = (otp) => {
 </html>`;
 };
 
-export { generateOtp, getMailContent };
+const createCryptoHash = (data) => {
+  return crypto.createHash("sha256").update(data).digest("hex");
+};
+
+const createToken = (token) => {
+  return jwt.verify(token, process.env.JWT_SECRET);
+};
+
+const signToken = (data, expireTime) => {
+  jwt.sign(data, process.env.JWT_SECRET, { expiresIn: expireTime });
+};
+
+export {
+  generateOtp,
+  getMailContent,
+  createCryptoHash,
+  createToken,
+  signToken,
+};

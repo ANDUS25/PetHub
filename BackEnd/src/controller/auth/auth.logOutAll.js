@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import sessionModel from "../../models/session.model.js";
 import { Title } from "../../utils/strings.js";
 import { log } from "console";
+import { createToken } from "../../utils/commonUtils.js";
 
 const logOutAll = async (req, res) => {
   const getRefreshToken = req.cookies.refreshToken;
@@ -13,10 +14,7 @@ const logOutAll = async (req, res) => {
       });
     }
 
-    const decodeRefreshToken = jwt.verify(
-      getRefreshToken,
-      process.env.JWT_SECRET,
-    );
+    const decodeRefreshToken = createToken(getRefreshToken);
 
     await sessionModel.updateMany(
       {

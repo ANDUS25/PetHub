@@ -1,11 +1,11 @@
 import nodemailer from "nodemailer";
 import Config from "../config/Config.js";
-import { Title } from "../utils/strings.js";
+import { CommonENum, Title } from "../utils/strings.js";
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: CommonENum.gmail,
   auth: {
-    type: "OAuth2",
+    type: CommonENum.OAuth2,
     user: Config.GOOGLE_USER,
     clientId: Config.GOOGLE_CLIENT_ID,
     clientSecret: Config.GOOGLE_CLIENT_SECRET,

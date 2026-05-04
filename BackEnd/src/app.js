@@ -1,6 +1,6 @@
 import morgan from "morgan";
 import connectToDatabase from "../db.js";
-import { Title } from "./utils/strings.js";
+import { EndPoint, Title } from "./utils/strings.js";
 import express from "express";
 import authRouter from "./routes/auth.routes.js";
 import cookieParser from "cookie-parser";
@@ -15,6 +15,6 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // main router
-app.use("/api/auth", authRouter);
+app.use(EndPoint.API_AUTH, authRouter);
 
 export default app;

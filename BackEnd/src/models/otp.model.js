@@ -5,16 +5,16 @@ const OTPSchema = new mongoose.Schema(
   {
     email: {
       type: String,
-      required: [true, "Email is required"],
+      required: [true, Title.EMAIL_REQUIRED],
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: [true, "User is required"],
+      required: [true, Title.USER_IS_REQUIRED],
     },
     otpHash: {
       type: String,
-      required: [true, "OTp Hash is required"],
+      required: [true, Title.OTP_HASH_IS_REQUIRED],
     },
   },
   { timestamps: true },

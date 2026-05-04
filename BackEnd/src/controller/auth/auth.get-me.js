@@ -1,6 +1,6 @@
-import { Title } from "../../utils/strings.js";
 import User from "../../models/user.model.js";
-import jwt from "jsonwebtoken";
+import { createToken } from "../../utils/commonUtils.js";
+import { Title } from "../../utils/strings.js";
 
 const getMe = async (req, res) => {
   const token = req.headers.authorization.split(" ")[1];
@@ -10,7 +10,7 @@ const getMe = async (req, res) => {
       return res.status(401).json({ message: Title.TOKEN_NOT_FOUND });
     }
 
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    const decodedToken = createToken(token);
 
     const userData = await User.findById(decodedToken.id);
 

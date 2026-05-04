@@ -1,12 +1,12 @@
-import crypto from "crypto";
 import OTPModel from "../../models/otp.model.js";
-import { Title } from "../../utils/strings.js";
 import User from "../../models/user.model.js";
+import { createCryptoHash } from "../../utils/commonUtils.js";
+import { Title } from "../../utils/strings.js";
 
 const verifyEmail = async (req, res) => {
   const { otp, email } = req.body;
 
-  const otpHash = crypto.createHash("sha256").update(otp).digest("hex");
+  const otpHash = createCryptoHash(otp);
 
   const otpDoc = await OTPModel.findOne({
     otpHash,
