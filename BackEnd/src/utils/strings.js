@@ -30,6 +30,36 @@ const Title = {
   REFRESH_TOKEN_NOT_FOUND: "Refresh token not found",
   INVALID_REFRESH_TOKEN: "Invalid refresh token",
   LOGGED_OUT_SUCCESSFULLY: "Logged out successfully",
+  USER_LOGOUT_FROM_ALL_DEVICES: "User Logout from all devices",
+  ERROR_OCCURRED_WHILE_REGISTERING_USER:
+    "Error occurred while registering user:",
+  ERROR_OCCURRED_IN_LOGOUT_CONTROLLER: "Error occurred in logout controller:",
+  ERROR_OCCURRED_IN_LOGOUT_ALL_CONTROLLER:
+    "Error occurred in logOutAll Controller:",
+  ERROR_OCCURRED_IN_RE_FRESH_TOKEN_CONTROLLER:
+    "Error occurred in refreshToken Controller:",
+  WRONG_USER_CREDENTIALS: "Wrong user credentials",
+  WRONG_USER_PASSWORD: "Wrong user password",
+  USER_LOGIN_SUCCESSFULLY: "User login successfully",
+  ERROR_OCCURRED_IN_LOGIN_CONTROLLER: "Error occurred in login controller:",
+  MONGO_DB_URL_MUST_BE_SET:
+    "Custom Error :- Mongo DB URL must be set in .env file",
+  JWT_MUST_BE_SET: "Custom Error :- JWT Secret must be set in .env file",
+  GOOGLE_CLIENT_ID_MUST_BE_SET:
+    "Custom Error :- Google client id be set in .env file",
+  GOOGLE_CLIENT_SECRET_MUST_BE_SET:
+    "Custom Error :- Google client secret be set in .env file",
+  GOOGLE_REFRESH_TOKEN_MUST_BE_SET:
+    "Custom Error :- Google refresh token be set in .env file",
+  GOOGLE_USER_MUST_BE_SET: "Custom Error :- Google user be set in .env file",
+  PORT_MUST_BE_SET: "Custom Error :- port be set in .env file",
+  ERROR_OCCURRED_WHILE_CONNECTING_TO_THE_MAIL_SERVICE:
+    "Error occurred while connecting to the mail service",
+  MAIL_SERVICE_READY_TO_SEND_MAIL: "mail service ready to send mail",
+  ERROR_OCCURRED_WHILE_SENDING_MAIL: "Error occurred while sending mail",
+  USER_MAIL_ADDRESS_IS_NOT_VERIFIED: "User Mail address is not verified",
+  INVALID_OTP_MESSAGE: "Invalid OTP message",
+  USER_VERIFIED_SUCCESSFULLY: "user verified successfully",
 };
 
 export { Title };

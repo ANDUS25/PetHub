@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { Title } from "./src/utils/strings.js";
+import Config from "./src/config/Config.js";
 
 const connectToDatabase = async () => {
   try {
@@ -11,7 +12,7 @@ const connectToDatabase = async () => {
       console.log(Title.ERROR_OCCURRED);
     });
 
-    await mongoose.connect(process.env.DB_CONNECTION);
+    await mongoose.connect(Config.MONGO_URL);
   } catch (error) {
     console.log(Title.ERROR_OCCUR_FROM_DATABASE);
     process.exit(1);

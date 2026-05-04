@@ -1,8 +1,11 @@
-import User from "../../models/user.model.js";
 import crypto from "crypto";
 import jwt from "jsonwebtoken";
-import { Title } from "../../utils/strings.js";
 import sessionModel from "../../models/session.model.js";
+import User from "../../models/user.model.js";
+import { Title } from "../../utils/strings.js";
+import { sendEmail } from "../../services/email.service.js";
+import { generateOtp, getMailContent } from "../../utils/commonUtils.js";
+import OTPModel from "../../models/otp.model.js";
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
@@ -32,43 +35,22 @@ const register = async (req, res) => {
       password: hashPassword,
     });
 
-    // First we create a refresh token and then we create an access token.
-    const refreshToken = jwt.sign(
-      { id: newUser?._id },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "7d",
-      },
-    );
+    const otp = generateOtp();
+    const otpHtmlContent = getMailContent(otp);
 
-    res.cookie("refreshToken", refreshToken, {
-      httpOnly: true,
-      secure: true,
-      sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    const otpHash = crypto.createHash("sha256").update(otp).digest("hex");
+
+    await OTPModel.create({
+      user: newUser._id,
+      email,
+      otpHash,
     });
 
-    const refreshTokenHash = crypto
-      .createHash("sha256")
-      .update(refreshToken)
-      .digest("hex");
-
-    // we are creating session to logout user from all the devices which user is currently login
-    const session = await sessionModel.create({
-      user: newUser?._id,
-      refreshTokenHash,
-      ip: req.ip,
-      userAgent: req.headers["user-agent"],
-    });
-
-    console.log("session", session);
-
-    const accessToken = jwt.sign(
-      { id: newUser?._id, sessionId: session._id },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "15m",
-      },
+    await sendEmail(
+      email,
+      "OTP Verification",
+      "Welcome onboard",
+      otpHtmlContent,
     );
 
     return res.status(201).json({
@@ -78,11 +60,11 @@ const register = async (req, res) => {
         name: newUser?.name,
         email: newUser?.email,
         password: newUser?.password,
+        verified: newUser?.verify,
       },
-      accessToken,
     });
   } catch (error) {
-    console.error("Error occurred while registering user:", error);
+    console.error(Title.ERROR_OCCURRED_WHILE_REGISTERING_USER, error);
     return res.status(500).json({
       message: Title.INTERNAL_SERVER_ERROR,
     });
