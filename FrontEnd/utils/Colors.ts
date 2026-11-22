@@ -32,6 +32,10 @@ const Colors = {
 
   // Dividers & Timeline
   BORDER_LINE: '#CBD5E1',
+
+  // Accents & Status
+  ACTIVE_GREEN: '#22C55E',
+  PURPLE_ACCENT: '#400092',
 };
 
 export default Colors;

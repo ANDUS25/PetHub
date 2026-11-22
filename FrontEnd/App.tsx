@@ -6,7 +6,7 @@ import DrawerNavigator from './Navigators/DrawerNavigator';
 import LogIn from './Screens/Auth/LogIn';
 import SignIn from './Screens/Auth/SignIn';
 import WelcomeScreen from './Screens/Welcome';
-import { store } from './store/store.js';
+import { store } from './store/store';
 
 const Stack = createNativeStackNavigator();
 

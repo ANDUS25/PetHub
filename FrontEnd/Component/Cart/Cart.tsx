@@ -4,6 +4,7 @@ import {
   Alert,
   FlatList,
   Image,
+  ListRenderItem,
   Text,
   ToastAndroid,
   TouchableOpacity,
@@ -11,27 +12,28 @@ import {
 } from 'react-native';
 import { TrashIcon } from 'react-native-heroicons/outline';
 import RazorpayCheckout from 'react-native-razorpay';
-import { useDispatch, useSelector } from 'react-redux';
 import { HeaderContainer } from '../../Container';
 import { deleteProduct } from '../../store/Slices/CartSlice';
-import Colors from '../../utils/Colors';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { CartItem } from '../../types';
+import Colors from '../../utils/color';
 import { GlobalAppTheme } from '../../utils/CommonUtils';
 import { AppTheme, Title } from '../../utils/Strings';
 
-const CartComponent = () => {
-  const dispatch = useDispatch();
-  let razorPayKeyID = RAZORPAY_KEY_ID;
+const CartComponent: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const razorPayKeyID = RAZORPAY_KEY_ID;
 
-  const theme = useSelector(state => state.ThemeReducer.value);
-  const cartInfo = useSelector(state => state.CartSlice);
-  const user = useSelector(state => state.userSlice);
+  const theme = useAppSelector((state) => state.ThemeReducer.value);
+  const cartInfo = useAppSelector((state) => state.CartSlice);
+  const user = useAppSelector((state) => state.userSlice);
 
-  let productPrice = cartInfo
-    .map(item => item.price)
+  const productPrice = cartInfo
+    .map((item) => item.price)
     .reduce((acc, reducer) => acc + reducer, 0);
 
   const handlePayment = () => {
-    let options = {
+    const options = {
       description: 'Credits towards consultation',
       image: 'https://i.imgur.com/3g7nmJC.png',
       currency: 'INR',
@@ -40,29 +42,26 @@ const CartComponent = () => {
       name: 'PetHub',
       order_id: '',
       prefill: {
-        email: user?.userEmail,
-        contact: user?.userContact,
-        name: user?.userName,
+        email: user?.userEmail || '',
+        contact: user?.userContact || '',
+        name: user?.userName || '',
       },
       theme: { color: Colors.INFO_LIGHT },
     };
+
     RazorpayCheckout.open(options)
-      .then(data => {
-        console.log('Payment Successful:', data);
-        Alert.alert(
-          Title.PAYMENT_SUCCESSFUL,
-          `ID: ${data.razorpay_payment_id}`,
-        );
+      .then((data: any) => {
+        Alert.alert(Title.PAYMENT_SUCCESSFUL, `ID: ${data.razorpay_payment_id}`);
       })
-      .catch(error => {
+      .catch((error: any) => {
         ToastAndroid.show(
-          `${error.error.reason} : ${error.error.description}`,
+          `${error?.error?.reason || 'Error'} : ${error?.error?.description || 'Payment Failed'}`,
           ToastAndroid.LONG,
         );
       });
   };
 
-  const handleDeleteCart = (obj: { id: number; name: string }) => {
+  const handleDeleteCart = (obj: { id: string | number; name: string }) => {
     Alert.alert(Title.ARE_WANT_TO_DELETE_THIS_CART, '', [
       {
         text: Title.YES,
@@ -83,7 +82,7 @@ const CartComponent = () => {
 
   useEffect(() => {}, [cartInfo]);
 
-  if (cartInfo?.length == 0) {
+  if (cartInfo.length === 0) {
     return (
       <View
         className="flex-1 justify-center items-center"
@@ -96,61 +95,64 @@ const CartComponent = () => {
     );
   }
 
+  const renderCartItem: ListRenderItem<CartItem> = ({ item }) => (
+    <View className="my-4 bg-slate-800 rounded-lg mx-2">
+      <View
+        className="rounded-t-lg flex flex-row"
+        style={{
+          backgroundColor: GlobalAppTheme(
+            theme,
+            Colors.INFO_DARK,
+            Colors.INFO_LIGHT,
+          ),
+        }}
+      >
+        <Image
+          className="rounded-lg"
+          source={{
+            uri: item?.data?.Image,
+          }}
+          resizeMode="cover"
+          style={{ height: 140, width: 200 }}
+        />
+
+        <View className="justify-center mx-2 space-y-3">
+          <Text className="text-lg" style={{ color: Colors.WHITE }}>
+            {item?.data?.Name}
+          </Text>
+
+          <Text className="text-base" style={{ color: Colors.WHITE }}>
+            {Title.TOTAL_QUANTITY} :- {item?.quantity}
+          </Text>
+
+          <Text className="text-base" style={{ color: Colors.WHITE }}>
+            {item?.price} {Title.RUPEES_SYMBOL} {Title.ONLY_SIGN}
+          </Text>
+        </View>
+      </View>
+      <TouchableOpacity
+        onPress={() =>
+          handleDeleteCart({
+            id: item?.data?.id,
+            name: item?.data?.Name,
+          })
+        }
+      >
+        <View className="items-center my-3">
+          <TrashIcon color={Colors.WHITE} />
+        </View>
+      </TouchableOpacity>
+    </View>
+  );
+
   return (
     <View className="flex-1" style={{ backgroundColor: GlobalAppTheme(theme) }}>
       <HeaderContainer back={true} header={Title.CART} Drawer={true} />
 
       <FlatList
         data={cartInfo}
-        renderItem={item => (
-          <View className="my-4 bg-slate-800 rounded-lg mx-2">
-            <View
-              className="rounded-t-lg flex flex-row"
-              style={{
-                backgroundColor: GlobalAppTheme(
-                  theme,
-                  Colors.INFO_DARK,
-                  Colors.INFO_LIGHT,
-                ),
-              }}
-            >
-              <Image
-                className="rounded-lg"
-                source={{
-                  uri: item?.item?.data?.Image,
-                }}
-                resizeMode="cover"
-                style={{ height: 140, width: 200 }}
-              />
-
-              <View className="justify-center mx-2 space-y-3">
-                <Text className="text-lg" style={{ color: Colors.WHITE }}>
-                  {item?.item?.data?.Name}
-                </Text>
-
-                <Text className="text-base" style={{ color: Colors.WHITE }}>
-                  {Title.TOTAL_QUANTITY} :- {item?.item?.quantity}
-                </Text>
-
-                <Text className="text-base" style={{ color: Colors.WHITE }}>
-                  {item?.item?.price} {Title.RUPEES_SYMBOL} {Title.ONLY_SIGN}
-                </Text>
-              </View>
-            </View>
-            <TouchableOpacity
-              onPress={() =>
-                handleDeleteCart({
-                  id: item?.item?.data?.id,
-                  name: item?.item?.data?.Name,
-                })
-              }
-            >
-              <View className="items-center my-3">
-                <TrashIcon color={Colors.WHITE} />
-              </View>
-            </TouchableOpacity>
-          </View>
-        )}
+        keyExtractor={(item, index) => `${item.data.id}-${index}`}
+        renderItem={renderCartItem}
       />
 
       <TouchableOpacity

@@ -1,22 +1,31 @@
 import React from 'react';
-import { Dimensions, TextInput, View } from 'react-native';
+import { Dimensions, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
-import Colors from '../../utils/Colors';
+import Colors from '../../utils/color';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 interface DropdownContainerInterface {
-  data:string[];
-  onChange:()=>void;
-  itemTextStyle:TextInput<style>;
-  style;
-  itemContainerStyle;
-  containerStyle;
-  placeholder:string;
-  selectedTextStyle;
+  data: any[];
+  onChange?: (item: any) => void;
+  itemTextStyle?: any;
+  style?: any;
+  itemContainerStyle?: any;
+  containerStyle?: any;
+  placeholder?: string;
+  selectedTextStyle?: any;
 }
 
-const DropdownContainer = () => {
+const DropdownContainer: React.FC<DropdownContainerInterface> = ({
+  data = [],
+  placeholder = '',
+  onChange = () => {},
+  style,
+  containerStyle,
+  itemContainerStyle,
+  itemTextStyle,
+  selectedTextStyle,
+}) => {
   return (
     <View>
       <Dropdown
@@ -25,33 +34,47 @@ const DropdownContainer = () => {
         placeholder={placeholder}
         labelField="label"
         valueField="value"
-        style={{
-          width: width - 20,
-          padding: 10,
-          borderRadius: 20,
-          borderBottomWidth: 1,
-          display: 'flex',
-          alignSelf: 'center',
-        }}
-        selectedTextStyle={{ color: 'black', paddingHorizontal: 10 }}
-        activeColor="#green"
-        containerStyle={{
-          backgroundColor: Colors.BACKGROUND_MAIN_LIGHT,
-          borderRadius: 20,
-          borderWidth: 0,
-        }}
-        itemContainerStyle={{
-          borderWidth: 1,
-          marginVertical: 1,
-          backgroundColor: '#400092',
-          borderRadius: 20,
-        }}
-        itemTextStyle={{
-          color: '#fff',
-        }}
+        style={[
+          {
+            width: width - 20,
+            padding: 10,
+            borderRadius: 20,
+            borderBottomWidth: 1,
+            display: 'flex',
+            alignSelf: 'center',
+          },
+          style,
+        ]}
+        selectedTextStyle={[
+          { color: Colors.BLACK, paddingHorizontal: 10 },
+          selectedTextStyle,
+        ]}
+        activeColor={Colors.ACTIVE_GREEN}
+        containerStyle={[
+          {
+            backgroundColor: Colors.BACKGROUND_MAIN_LIGHT,
+            borderRadius: 20,
+            borderWidth: 0,
+          },
+          containerStyle,
+        ]}
+        itemContainerStyle={[
+          {
+            borderWidth: 1,
+            marginVertical: 1,
+            backgroundColor: Colors.PURPLE_ACCENT,
+            borderRadius: 20,
+          },
+          itemContainerStyle,
+        ]}
+        itemTextStyle={[
+          {
+            color: Colors.WHITE,
+          },
+          itemTextStyle,
+        ]}
         onChange={onChange}
         maxHeight={400}
-        // mode={'modal'}
       />
     </View>
   );

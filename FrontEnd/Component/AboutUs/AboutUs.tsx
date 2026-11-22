@@ -21,21 +21,15 @@ import {
   UserCircleIcon,
   VideoCameraIcon,
 } from 'react-native-heroicons/outline';
-import { useSelector } from 'react-redux';
 import Header from '../../Container/Header';
-import Colors from '../../utils/Colors';
+import { useAppSelector } from '../../store/store';
+import Colors from '../../utils/color';
 import {
   globalAppBlackAndWhiteTheme,
   GlobalAppTheme,
 } from '../../utils/CommonUtils';
 import { Title } from '../../utils/Strings';
 import styles from './Styles';
-
-interface RootState {
-  ThemeReducer: {
-    value: string;
-  };
-}
 
 interface Milestone {
   year: string;
@@ -104,7 +98,7 @@ const FEATURES: FeatureHighlight[] = [
 const WEBSITE_URL = 'https://www.mixo.io/site/pet-hub-nbuoc';
 
 const AboutUs: React.FC = () => {
-  const theme = useSelector((state: RootState) => state.ThemeReducer.value);
+  const theme = useAppSelector((state) => state.ThemeReducer.value);
   const isDark = theme !== 'light';
 
   const handleOpenWebsite = async () => {
@@ -133,7 +127,9 @@ const AboutUs: React.FC = () => {
         },
         card: {
           backgroundColor: isDark ? Colors.CARD_BG_DARK : Colors.CARD_BG_LIGHT,
-          borderColor: isDark ? Colors.CARD_BORDER_DARK : Colors.CARD_BORDER_LIGHT,
+          borderColor: isDark
+            ? Colors.CARD_BORDER_DARK
+            : Colors.CARD_BORDER_LIGHT,
           borderWidth: 1,
         },
         primaryText: {

@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   Alert,
   ScrollView,
@@ -10,17 +10,17 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useSelector } from 'react-redux';
 import { HeaderContainer, TextInputContainer } from '../../Container/index';
+import { useAppSelector } from '../../store/store';
 import {
   globalAppActiveTheme,
   globalAppBlackAndWhiteTheme,
 } from '../../utils/CommonUtils';
 import { ScreenName, ScreenTitle, Title } from '../../utils/Strings';
 
-const ContactUs = () => {
-  const Navigation = useNavigation();
-  const theme = useSelector(state => state.ThemeReducer.value);
+const ContactUs: React.FC = () => {
+  const navigation = useNavigation<any>();
+  const theme = useAppSelector((state) => state.ThemeReducer.value);
 
   const [userInputInfo, setUserInputInfo] = useState({
     fName: '',
@@ -32,15 +32,15 @@ const ContactUs = () => {
 
   const OkHandler = () => {
     if (
-      userInputInfo.fName == '' ||
-      userInputInfo.lName == '' ||
-      userInputInfo.email == ''
+      userInputInfo.fName === '' ||
+      userInputInfo.lName === '' ||
+      userInputInfo.email === ''
     ) {
       Alert.alert(Title.PLEASE_FILL_NAMES_AND_EMAIL_AT_LEAST);
     } else {
       ToastAndroid.show(Title.THANK_YOU_FOR_YOUR_RESPONSE, ToastAndroid.CENTER);
       setTimeout(() => {
-        Navigation.navigate(ScreenName.LANDING);
+        navigation.navigate(ScreenName.LANDING);
       }, 3000);
     }
   };
@@ -55,10 +55,32 @@ const ContactUs = () => {
     ]);
   };
 
+  const dynamicStyles = useMemo(
+    () =>
+      StyleSheet.create({
+        container: {
+          flex: 1,
+          backgroundColor: globalAppActiveTheme(theme),
+        },
+        textInput: {
+          backgroundColor: globalAppActiveTheme(theme),
+          color: globalAppBlackAndWhiteTheme(theme),
+          fontFamily: 'Mulish-Medium',
+          fontSize: 20,
+        },
+        mainHeader: {
+          fontFamily: 'Mulish-Bold',
+          fontSize: 20,
+          color: globalAppBlackAndWhiteTheme(theme),
+        },
+      }),
+    [theme],
+  );
+
   return (
     <>
       <StatusBar />
-      <ScrollView style={Styles.container}>
+      <ScrollView style={dynamicStyles.container}>
         <View>
           <HeaderContainer
             back={true}
@@ -68,7 +90,7 @@ const ContactUs = () => {
 
           <View className="flex flex-col justify-between mx-2">
             <View className="my-4">
-              <Text style={Styles.mainHeader} className="text-center">
+              <Text style={dynamicStyles.mainHeader} className="text-center">
                 If you would like to donate to our cause or report a stray
                 animal, then please contact our 24/7 help center.
               </Text>
@@ -77,8 +99,8 @@ const ContactUs = () => {
               <TextInputContainer
                 placeholder={Title.FIRST_NAME}
                 className="w-full p-3 rounded-2xl my-2"
-                style={Styles.textInput}
-                TextChange={e =>
+                style={dynamicStyles.textInput}
+                TextChange={(e: string) =>
                   setUserInputInfo(prev => ({ ...prev, fName: e }))
                 }
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
@@ -87,8 +109,8 @@ const ContactUs = () => {
               <TextInputContainer
                 placeholder={Title.Last_Name}
                 className="w-full p-3 rounded-2xl my-2"
-                style={Styles.textInput}
-                TextChange={e =>
+                style={dynamicStyles.textInput}
+                TextChange={(e: string) =>
                   setUserInputInfo(prev => ({ ...prev, lName: e }))
                 }
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
@@ -97,8 +119,8 @@ const ContactUs = () => {
               <TextInputContainer
                 placeholder={Title.Email_Address}
                 className="w-full p-3 rounded-2xl my-2"
-                style={Styles.textInput}
-                TextChange={e =>
+                style={dynamicStyles.textInput}
+                TextChange={(e: string) =>
                   setUserInputInfo(prev => ({ ...prev, email: e }))
                 }
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
@@ -107,10 +129,10 @@ const ContactUs = () => {
               <TextInputContainer
                 placeholder={Title.SUBJECT}
                 className="w-full p-3 rounded-2xl my-2"
-                TextChange={e =>
+                TextChange={(e: string) =>
                   setUserInputInfo(prev => ({ ...prev, subject: e }))
                 }
-                style={Styles.textInput}
+                style={dynamicStyles.textInput}
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
               />
 
@@ -120,7 +142,7 @@ const ContactUs = () => {
                 TextChange={(e: string) => {
                   setUserInputInfo(prev => ({ ...prev, message: e }));
                 }}
-                style={Styles.textInput}
+                style={dynamicStyles.textInput}
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
               />
             </View>
@@ -136,23 +158,5 @@ const ContactUs = () => {
     </>
   );
 };
-
-const Styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: globalAppActiveTheme(theme),
-  },
-  textInput: {
-    backgroundColor: globalAppActiveTheme(theme),
-    color: globalAppBlackAndWhiteTheme(theme),
-    fontFamily: 'Mulish-Medium',
-    fontSize: 20,
-  },
-  mainHeader: {
-    fontFamily: 'Mulish-Bold',
-    fontSize: 20,
-    color: globalAppBlackAndWhiteTheme(theme),
-  },
-});
 
 export default ContactUs;

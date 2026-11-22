@@ -1,4 +1,4 @@
-import Colors from './Colors';
+import Colors from './color';
 import { AppTheme } from './Strings';
 
 const GlobalAppTheme = (
