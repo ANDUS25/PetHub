@@ -3,6 +3,7 @@ import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { ALERT_TYPE, Dialog } from 'react-native-alert-notification';
 import { DropdownContainer, TextInputContainer } from '../../../Container';
 import Colors from '../../../utils/color';
+import { Title } from '../../../utils/Strings';
 import { valueIsEmpty } from '../../../utils/utils';
 
 const familyCount = [
@@ -38,15 +39,15 @@ const Register: React.FC = () => {
     ) {
       Dialog.show({
         type: ALERT_TYPE.WARNING,
-        title: 'Warning',
-        textBody: 'Please enter data in correct format',
+        title: Title.WARNING,
+        textBody: Title.PLEASE_ENTER_DATA_CORRECT_FORMAT,
         autoClose: true,
       });
     } else {
       Dialog.show({
         type: ALERT_TYPE.SUCCESS,
-        title: 'Success',
-        textBody: 'Congrats! this is dialog box success',
+        title: Title.SUCCESS,
+        textBody: Title.DIALOG_BOX_SUCCESS,
         autoClose: true,
       });
     }
@@ -56,32 +57,32 @@ const Register: React.FC = () => {
     <ScrollView>
       <View style={{ flex: 1 }}>
         <View style={{ display: 'flex', alignItems: 'center' }}>
-          <Text className="text-lg">User Details</Text>
+          <Text className="text-lg">{Title.USER_DETAILS}</Text>
         </View>
         <View style={{ margin: 10 }}>
-          <Text>Family Members</Text>
+          <Text>{Title.FAMILY_MEMBERS}</Text>
           <DropdownContainer
             data={familyCount}
-            placeholder={'Select Family Member'}
+            placeholder={Title.SELECT_FAMILY_MEMBER}
             onChange={({ value }: { value: string }) => {
               setFamily(value);
             }}
           />
         </View>
         <View style={{ margin: 10 }}>
-          <Text>Property Type</Text>
+          <Text>{Title.PROPERTY_TYPE}</Text>
           <DropdownContainer
             data={Rented}
-            placeholder={'Select Apartment Type'}
+            placeholder={Title.SELECT_APARTMENT_TYPE}
             onChange={({ value }: { value: string }) => {
               setApartment(value);
             }}
           />
         </View>
         <View style={{ margin: 10 }}>
-          <Text>City</Text>
+          <Text>{Title.CITY}</Text>
           <TextInputContainer
-            placeholder={'Please Enter City Name'}
+            placeholder={Title.PLEASE_ENTER_CITY_NAME}
             TextChange={setCity}
             style={{ borderBottomWidth: 1 }}
             className=""
@@ -89,9 +90,9 @@ const Register: React.FC = () => {
           />
         </View>
         <View style={{ margin: 10 }}>
-          <Text>State</Text>
+          <Text>{Title.STATE}</Text>
           <TextInputContainer
-            placeholder={'Please Enter State Name'}
+            placeholder={Title.PLEASE_ENTER_STATE_NAME}
             TextChange={setState}
             style={{ borderBottomWidth: 1 }}
             className=""
@@ -99,28 +100,20 @@ const Register: React.FC = () => {
           />
         </View>
         <View style={{ margin: 10 }}>
-          <Text>Country</Text>
+          <Text>{Title.COUNTRY}</Text>
           <TextInputContainer
-            placeholder={'Please Enter Country Name'}
+            placeholder={Title.PLEASE_ENTER_COUNTRY_NAME}
             TextChange={setCountry}
             style={{ borderBottomWidth: 1 }}
             className=""
             placeHolderColor={Colors.BLACK}
           />
         </View>
-        <TouchableOpacity onPress={handleData} style={{ alignSelf: 'center', marginVertical: 16 }}>
-          <Text
-            style={{
-              backgroundColor: Colors.INFO_DARK,
-              borderRadius: 20,
-              padding: 20,
-              maxWidth: 200,
-              color: Colors.WHITE,
-              textAlign: 'center',
-            }}
-          >
-            Register Yourself
-          </Text>
+        <TouchableOpacity
+          onPress={handleData}
+          className="bg-yellow-400 p-5 rounded-3xl m-2"
+        >
+          <Text className="text-center">{Title.SUBMIT}</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

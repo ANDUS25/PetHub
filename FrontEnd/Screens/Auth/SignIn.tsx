@@ -20,7 +20,9 @@ import {
 } from 'react-native-heroicons/outline';
 import { auth } from '../../config/Config';
 import GoogleSingInContainer from '../../Container/Socials/Google';
+import { FontFamily } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { Title } from '../../utils/Strings';
 import {
   emailValidation,
   hasaWhiteSpace,
@@ -45,23 +47,23 @@ const SignIn: React.FC = () => {
         valueIsEmpty(userEmail) ||
         valueIsEmpty(userPassword)
       ) {
-        toast('Please fill all data correctly');
+        toast(Title.FILL_ALL_DATA);
       } else if (
         hasaWhiteSpace(userName) ||
         hasaWhiteSpace(userEmail) ||
         hasaWhiteSpace(userPassword)
       ) {
-        toast('Fields should not contain any white spaces');
+        toast(Title.NO_WHITESPACE);
       } else if (!emailValidation(userEmail)) {
-        toast('Please enter a valid email address');
+        toast(Title.ENTER_VALID_EMAIL);
       } else if (specialChar(userName)) {
-        toast('Name should not any contain special character');
+        toast(Title.NAME_NO_SPECIAL_CHAR);
       } else if (validationLength(userPassword, 8)) {
-        toast('Password should be at least 8 characters long');
+        toast(Title.PASSWORD_MIN_LENGTH);
       } else {
         await createUserWithEmailAndPassword(auth, userEmail, userPassword);
 
-        toast('User Register Successfully');
+        toast(Title.USER_REGISTER_SUCCESS);
 
         setTimeout(() => {
           navigation.navigate('Home');
@@ -74,9 +76,9 @@ const SignIn: React.FC = () => {
 
   const AuthErrorHandler = (error: any) => {
     if (error.message === 'Firebase: Error (auth/email-already-in-use)') {
-      ToastAndroid.show('This Email is already used.', ToastAndroid.SHORT);
+      ToastAndroid.show(Title.EMAIL_ALREADY_USED, ToastAndroid.SHORT);
     } else if (error.message === 'Firebase: Error (auth/invalid-email)') {
-      ToastAndroid.show('This Email is not valid.', ToastAndroid.SHORT);
+      ToastAndroid.show(Title.EMAIL_NOT_VALID, ToastAndroid.SHORT);
     }
   };
 
@@ -97,9 +99,9 @@ const SignIn: React.FC = () => {
           />
           <Text
             className="text-3xl my-8"
-            style={{ fontFamily: 'Mulish-Medium', color: Colors.WHITE }}
+            style={{ fontFamily: FontFamily.MULISH_MEDIUM, color: Colors.WHITE }}
           >
-            Register
+            {Title.REGISTER}
           </Text>
           <View className="w-3/4">
             <View className="flex flex-row bg-white p-1 items-center mb-2 rounded-xl">
@@ -108,12 +110,12 @@ const SignIn: React.FC = () => {
               </View>
 
               <TextInput
-                placeholder="User Name"
+                placeholder={Title.USER_NAME}
                 placeholderTextColor={Colors.BLACK}
                 value={userName}
                 onChangeText={(e) => setUserName(e)}
                 className="text-xl w-[250]"
-                style={{ fontFamily: 'Mulish-Medium', color: Colors.BLACK }}
+                style={{ fontFamily: FontFamily.MULISH_MEDIUM, color: Colors.BLACK }}
               />
             </View>
 
@@ -122,12 +124,12 @@ const SignIn: React.FC = () => {
                 <AtSymbolIcon color={Colors.BLACK} />
               </View>
               <TextInput
-                placeholder="User Email"
+                placeholder={Title.USER_EMAIL}
                 placeholderTextColor={Colors.BLACK}
                 value={userEmail}
                 onChangeText={(e) => setUserEmail(e)}
                 className="text-xl w-[250]"
-                style={{ fontFamily: 'Mulish-Medium', color: Colors.BLACK }}
+                style={{ fontFamily: FontFamily.MULISH_MEDIUM, color: Colors.BLACK }}
                 keyboardType="email-address"
               />
             </View>
@@ -137,7 +139,7 @@ const SignIn: React.FC = () => {
               </View>
 
               <TextInput
-                placeholder="User Password"
+                placeholder={Title.USER_PASSWORD}
                 placeholderTextColor={Colors.BLACK}
                 value={userPassword}
                 onChangeText={(e) => setUserPassword(e)}
@@ -146,7 +148,7 @@ const SignIn: React.FC = () => {
                 multiline={false}
                 style={{
                   width: '75%',
-                  fontFamily: 'Mulish-Medium',
+                  fontFamily: FontFamily.MULISH_MEDIUM,
                   color: Colors.BLACK,
                 }}
                 maxLength={16}
@@ -165,7 +167,7 @@ const SignIn: React.FC = () => {
 
           <View className="flex flex-row justify-center items-center my-6">
             <View className="border-b-2 w-1/2 mr-4 border-yellow-400" />
-            <Text className="text-white">OR</Text>
+            <Text className="text-white">{Title.OR}</Text>
             <View className="border-b-2 w-1/2 ml-4 border-yellow-400" />
           </View>
 
@@ -179,27 +181,27 @@ const SignIn: React.FC = () => {
           >
             <Text
               className="text-2xl"
-              style={{ fontFamily: 'Raleway-Bold', color: Colors.BLACK }}
+              style={{ fontFamily: FontFamily.RALEWAY_BOLD, color: Colors.BLACK }}
             >
-              SignIn
+              {Title.SIGNIN}
             </Text>
           </TouchableOpacity>
           <View className="flex flex-row justify-center items-center my-6">
             <Text
               className="text-lg"
-              style={{ fontFamily: 'Raleway-ExtraLight', color: Colors.WHITE }}
+              style={{ fontFamily: FontFamily.RALEWAY_EXTRA_LIGHT, color: Colors.WHITE }}
             >
-              or already have an account{' '}
+              {Title.ALREADY_HAVE_ACCOUNT}
             </Text>
             <TouchableOpacity onPress={handleLogIn}>
               <Text
                 className="text-lg"
                 style={{
-                  fontFamily: 'Raleway-MediumItalic',
+                  fontFamily: FontFamily.RALEWAY_MEDIUM_ITALIC,
                   color: Colors.AUTH_LINK,
                 }}
               >
-                LogIn
+                {Title.LOGIN}
               </Text>
             </TouchableOpacity>
           </View>

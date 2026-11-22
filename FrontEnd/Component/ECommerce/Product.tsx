@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
 import Products from '../../JSON/products.json';
 import { useAppSelector } from '../../store/store';
+import { FontFamily } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { ScreenRouteName } from '../../utils/Strings';
 
 interface ProductItemProps {
   Header: string;
@@ -41,7 +43,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ Header }) => {
         className="text-2xl ml-2"
         style={{
           color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-          fontFamily: 'Mulish-Medium',
+          fontFamily: FontFamily.MULISH_MEDIUM,
         }}
       >
         {Header}
@@ -54,7 +56,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ Header }) => {
         keyExtractor={(_item, index) => index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={() => navigation.navigate('InnerProduct', item)}
+            onPress={() => navigation.navigate(ScreenRouteName.INNER_PRODUCT, item)}
           >
             <View
               className="rounded-2xl m-1 p-4"
@@ -72,7 +74,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ Header }) => {
                 <Text
                   className="text-xl"
                   style={{
-                    fontFamily: 'Mulish-Light',
+                    fontFamily: FontFamily.MULISH_LIGHT,
                     color: Colors.WHITE,
                   }}
                 >
@@ -82,7 +84,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ Header }) => {
               <View className="flex flex-row justify-between items-center">
                 <Text
                   style={{
-                    fontFamily: 'Mulish-Light',
+                    fontFamily: FontFamily.MULISH_LIGHT,
                     color: Colors.WHITE,
                   }}
                 >

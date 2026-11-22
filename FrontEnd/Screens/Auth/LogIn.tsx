@@ -18,7 +18,9 @@ import {
   LockClosedIcon,
 } from 'react-native-heroicons/outline';
 import { auth } from '../../config/Config';
+import { FontFamily } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { Title } from '../../utils/Strings';
 
 const LogIn: React.FC = () => {
   const [userEmail, setUserEmail] = useState('');
@@ -29,21 +31,18 @@ const LogIn: React.FC = () => {
 
   const handleLogIn = async () => {
     if (!userEmail.includes('@') || !userEmail.includes('.com')) {
-      ToastAndroid.show('Mail should contain @ and .com', ToastAndroid.SHORT);
+      ToastAndroid.show(Title.EMAIL_VALIDATION_ERROR, ToastAndroid.SHORT);
     } else if (
       !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})\S+$/.test(userPassword)
     ) {
-      ToastAndroid.show(
-        'Password Should contain one Small, Capital and Special character.',
-        ToastAndroid.SHORT,
-      );
+      ToastAndroid.show(Title.PASSWORD_VALIDATION_ERROR, ToastAndroid.SHORT);
     } else {
       try {
         if (userEmail && userPassword) {
           await signInWithEmailAndPassword(auth, userEmail, userPassword);
 
           setTimeout(() => {
-            ToastAndroid.show('User Login Successfully', ToastAndroid.SHORT);
+            ToastAndroid.show(Title.USER_LOGIN_SUCCESS, ToastAndroid.SHORT);
           }, 1000);
         }
       } catch (error: any) {
@@ -51,9 +50,9 @@ const LogIn: React.FC = () => {
           error.code === 'auth/user-not-found' ||
           error.code === 'auth/wrong-password'
         ) {
-          ToastAndroid.show('Invalid email or password', ToastAndroid.SHORT);
+          ToastAndroid.show(Title.INVALID_EMAIL_OR_PASSWORD, ToastAndroid.SHORT);
         } else {
-          ToastAndroid.show('Please check your credentials', ToastAndroid.SHORT);
+          ToastAndroid.show(Title.CHECK_CREDENTIALS, ToastAndroid.SHORT);
         }
       }
     }
@@ -72,9 +71,9 @@ const LogIn: React.FC = () => {
           />
           <Text
             className="text-3xl my-8 text-white"
-            style={{ fontFamily: 'Mulish-Medium' }}
+            style={{ fontFamily: FontFamily.MULISH_MEDIUM }}
           >
-            LogIn
+            {Title.LOGIN}
           </Text>
           <View style={{ width: '80%' }}>
             <View className="flex flex-row bg-white p-1 items-center mb-2 rounded-xl">
@@ -82,12 +81,12 @@ const LogIn: React.FC = () => {
                 <AtSymbolIcon color={Colors.BLACK} />
               </View>
               <TextInput
-                placeholder="User Email"
+                placeholder={Title.USER_EMAIL}
                 placeholderTextColor={Colors.BLACK}
                 value={userEmail}
                 onChangeText={(e) => setUserEmail(e)}
                 className="text-xl w-[250]"
-                style={{ fontFamily: 'Mulish-Medium', color: Colors.BLACK }}
+                style={{ fontFamily: FontFamily.MULISH_MEDIUM, color: Colors.BLACK }}
               />
             </View>
             <View className="flex flex-row bg-white p-1 items-center rounded-xl">
@@ -95,7 +94,7 @@ const LogIn: React.FC = () => {
                 <LockClosedIcon color={Colors.BLACK} />
               </View>
               <TextInput
-                placeholder="User Password"
+                placeholder={Title.USER_PASSWORD}
                 placeholderTextColor={Colors.BLACK}
                 value={userPassword}
                 onChangeText={(e) => setUserPassword(e)}
@@ -104,7 +103,7 @@ const LogIn: React.FC = () => {
                 multiline={false}
                 style={{
                   width: '75%',
-                  fontFamily: 'Mulish-Medium',
+                  fontFamily: FontFamily.MULISH_MEDIUM,
                   color: Colors.BLACK,
                 }}
                 maxLength={16}
@@ -126,27 +125,27 @@ const LogIn: React.FC = () => {
           >
             <Text
               className="text-2xl"
-              style={{ fontFamily: 'Raleway-Bold', color: Colors.BLACK }}
+              style={{ fontFamily: FontFamily.RALEWAY_BOLD, color: Colors.BLACK }}
             >
-              LogIn
+              {Title.LOGIN}
             </Text>
           </TouchableOpacity>
           <View className="flex flex-row flex-1 items-center justify-center">
             <Text
               className="text-lg"
-              style={{ fontFamily: 'Raleway-ExtraLight', color: Colors.WHITE }}
+              style={{ fontFamily: FontFamily.RALEWAY_EXTRA_LIGHT, color: Colors.WHITE }}
             >
-              Don't have an account{' '}
+              {Title.DONT_HAVE_ACCOUNT}
             </Text>
             <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
               <Text
                 className="text-lg self-center"
                 style={{
-                  fontFamily: 'Raleway-MediumItalic',
+                  fontFamily: FontFamily.RALEWAY_MEDIUM_ITALIC,
                   color: Colors.AUTH_LINK,
                 }}
               >
-                signIn
+                {Title.SIGNIN}
               </Text>
             </TouchableOpacity>
           </View>

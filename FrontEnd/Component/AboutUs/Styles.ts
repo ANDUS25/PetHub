@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import Colors from '../../utils/Colors';
+import { FontFamily, FontSize, Typography } from '../../theme/Typography';
+import Colors from '../../utils/color';
 
 const styles = StyleSheet.create({
   scrollContent: {
@@ -34,14 +35,12 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   heroBadgeText: {
-    fontSize: 12,
-    fontFamily: 'Mulish-Bold',
+    ...Typography.badge,
     color: Colors.PRIMARY_BLUE,
     marginLeft: 6,
   },
   heroTitle: {
-    fontSize: 24,
-    fontFamily: 'Mulish-Bold',
+    ...Typography.title,
     textAlign: 'center',
     marginBottom: 8,
   },
@@ -49,8 +48,7 @@ const styles = StyleSheet.create({
     color: Colors.lightBlue,
   },
   heroSubtitle: {
-    fontSize: 13,
-    fontFamily: 'Mulish-Regular',
+    ...Typography.body,
     textAlign: 'center',
     lineHeight: 20,
   },
@@ -60,33 +58,31 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   sectionTitle: {
-    fontSize: 17,
-    fontFamily: 'Mulish-Bold',
+    fontFamily: FontFamily.MULISH_BOLD,
+    fontSize: FontSize.XL - 1, // 17
     marginLeft: 8,
   },
   featuresSection: {
     marginVertical: 10,
   },
   sectionHeading: {
-    fontSize: 17,
-    fontFamily: 'Mulish-Bold',
+    fontFamily: FontFamily.MULISH_BOLD,
+    fontSize: FontSize.XL - 1, // 17
     marginBottom: 10,
     marginLeft: 4,
   },
   founderName: {
-    fontSize: 16,
-    fontFamily: 'Mulish-Bold',
+    ...Typography.subheading,
   },
   founderRole: {
-    fontSize: 13,
-    fontFamily: 'Mulish-Medium',
+    fontFamily: FontFamily.MULISH_MEDIUM,
+    fontSize: FontSize.BASE,
     color: Colors.lightBlue,
     marginTop: 2,
     marginBottom: 10,
   },
   bodyText: {
-    fontSize: 13,
-    fontFamily: 'Mulish-Regular',
+    ...Typography.body,
     lineHeight: 21,
   },
   featureGrid: {
@@ -110,13 +106,12 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   featureTitle: {
-    fontSize: 13,
-    fontFamily: 'Mulish-Bold',
+    fontFamily: FontFamily.MULISH_BOLD,
+    fontSize: FontSize.BASE,
     marginBottom: 4,
   },
   featureDesc: {
-    fontSize: 11,
-    fontFamily: 'Mulish-Regular',
+    ...Typography.caption,
     lineHeight: 15,
   },
   timelineContainer: {
@@ -157,16 +152,14 @@ const styles = StyleSheet.create({
   },
   timelineYearText: {
     color: Colors.PRIMARY_BLUE,
-    fontSize: 11,
-    fontFamily: 'Mulish-Bold',
+    ...Typography.captionBold,
   },
   timelineTitle: {
-    fontSize: 13,
-    fontFamily: 'Mulish-Bold',
+    fontFamily: FontFamily.MULISH_BOLD,
+    fontSize: FontSize.BASE,
   },
   timelineDesc: {
-    fontSize: 12,
-    fontFamily: 'Mulish-Regular',
+    ...Typography.bodySmall,
     marginTop: 2,
     lineHeight: 17,
   },
@@ -177,14 +170,13 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   ctaHeading: {
-    fontSize: 17,
-    fontFamily: 'Mulish-Bold',
+    fontFamily: FontFamily.MULISH_BOLD,
+    fontSize: FontSize.XL - 1, // 17
     marginTop: 8,
     marginBottom: 6,
   },
   ctaSubtitle: {
-    fontSize: 13,
-    fontFamily: 'Mulish-Regular',
+    ...Typography.body,
     textAlign: 'center',
     lineHeight: 19,
     marginBottom: 16,
@@ -200,9 +192,8 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   ctaButtonText: {
+    ...Typography.button,
     color: Colors.WHITE,
-    fontFamily: 'Mulish-Bold',
-    fontSize: 14,
     marginRight: 8,
   },
   footer: {
@@ -210,8 +201,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   footerText: {
-    fontSize: 11,
-    fontFamily: 'Mulish-Regular',
+    ...Typography.caption,
     lineHeight: 18,
   },
 });

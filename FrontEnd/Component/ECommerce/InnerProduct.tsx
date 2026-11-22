@@ -11,7 +11,9 @@ import {
 import { HeaderContainer, ScrollViewContainer } from '../../Container';
 import { addProduct } from '../../store/Slices/CartSlice';
 import { useAppDispatch, useAppSelector } from '../../store/store';
+import { FontFamily, FontSize } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { Title } from '../../utils/Strings';
 
 const { width } = Dimensions.get('screen');
 
@@ -69,12 +71,12 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
       }),
     );
 
-    ToastAndroid.show('Product Added to cart', ToastAndroid.SHORT);
+    ToastAndroid.show(Title.PRODUCT_ADDED_TO_CART, ToastAndroid.SHORT);
   };
 
   return (
     <ScrollViewContainer>
-      <HeaderContainer back={true} header={'Products'} Drawer={true} />
+      <HeaderContainer back={true} header={Title.PRODUCTS} Drawer={true} />
 
       <View>
         <Image
@@ -84,17 +86,17 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
         />
         <Text
           className="text-center text-2xl my-3"
-          style={[{ fontFamily: 'Mulish-Medium' }, style(theme).text]}
+          style={[{ fontFamily: FontFamily.MULISH_MEDIUM }, style(theme).text]}
         >
           {productInfo?.Name}
         </Text>
         <View className="flex flex-row justify-between items-center my-3">
           <View className="flex flex-row items-center">
             <Text className="text-lg" style={style(theme).text}>
-              Product By -{' '}
+              {Title.PRODUCT_BY}
             </Text>
             <Text
-              style={[{ fontFamily: 'Raleway-Medium' }, style(theme).text]}
+              style={[{ fontFamily: FontFamily.RALEWAY_MEDIUM }, style(theme).text]}
               className="text-xl"
             >
               {productInfo?.CompanyName}
@@ -110,7 +112,7 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
         {productInfo?.Size && (
           <View className="flex flex-row items-center">
             <Text className="text-lg" style={style(theme).text}>
-              Size:-
+              {Title.SIZE_LABEL}
             </Text>
             <View className="flex flex-row">
               {productInfo.Size.map((item, index) => (
@@ -133,7 +135,7 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
 
         <View className="flex flex-row items-center">
           <Text className="text-lg" style={style(theme).text}>
-            Quantity Available :-{' '}
+            {Title.QUANTITY_AVAILABLE}
           </Text>
 
           <Text className="text-xl" style={style(theme).text}>
@@ -164,7 +166,7 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
                   }
             }
           >
-            Add +
+            {Title.ADD_PLUS}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleRemoveProductCount}>
@@ -188,7 +190,7 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
                   }
             }
           >
-            Remove -
+            {Title.REMOVE_MINUS}
           </Text>
         </TouchableOpacity>
       </View>
@@ -196,7 +198,7 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
       <View>
         <View className="flex flex-row my-4">
           <Text className="text-lg" style={style(theme).text}>
-            Total Quantity you're buying :{' '}
+            {Title.TOTAL_QUANTITY_BUYING}
           </Text>
           <Text className="text-center text-lg" style={style(theme).text}>
             {totalCount}
@@ -204,10 +206,10 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
         </View>
         <View className="flex flex-row my-2">
           <Text className="text-lg" style={style(theme).text}>
-            Total Price :{' '}
+            {Title.TOTAL_PRICE}
           </Text>
           <Text className="text-center text-lg" style={style(theme).text}>
-            {`₹ ${amount} /-`}
+            {`${Title.RUPEES_SYMBOL} ${amount} ${Title.ONLY_SIGN}`}
           </Text>
         </View>
       </View>
@@ -221,7 +223,9 @@ const InnerProduct: React.FC<InnerProductProps> = ({ route }) => {
         }}
       >
         <View className="p-4 w-full">
-          <Text className="text-center text-lg text-white">Add to cart</Text>
+          <Text className="text-center text-lg text-white">
+            {Title.ADD_TO_CART}
+          </Text>
         </View>
       </TouchableOpacity>
     </ScrollViewContainer>

@@ -46,52 +46,51 @@ interface FeatureHighlight {
 const MILESTONES: Milestone[] = [
   {
     year: '2002',
-    title: 'The Inception',
-    description: 'Conceived from a deep passion for animal care and welfare.',
+    title: Title.MILESTONE_2002_TITLE,
+    description: Title.MILESTONE_2002_DESC,
   },
   {
     year: '2007',
-    title: 'Operations Began',
-    description: 'Ground operations launched to support local pet parents.',
+    title: Title.MILESTONE_2007_TITLE,
+    description: Title.MILESTONE_2007_DESC,
   },
   {
     year: '2012',
-    title: 'Digital Platform',
-    description: 'Expanded into online services and remote veterinary support.',
+    title: Title.MILESTONE_2012_TITLE,
+    description: Title.MILESTONE_2012_DESC,
   },
   {
     year: '2017',
-    title: 'First Funding',
-    description: 'Secured seed investment to scale pet-care solutions.',
+    title: Title.MILESTONE_2017_TITLE,
+    description: Title.MILESTONE_2017_DESC,
   },
   {
     year: 'Today',
-    title: 'Social & Smart App',
-    description:
-      'Mobile community connecting pet lovers, reels, and certified care.',
+    title: Title.MILESTONE_TODAY_TITLE,
+    description: Title.MILESTONE_TODAY_DESC,
   },
 ];
 
 const FEATURES: FeatureHighlight[] = [
   {
     icon: (color: string) => <HeartIcon color={color} size={22} />,
-    title: 'Veterinary Advice',
-    desc: 'Expert care and verified on-site visits.',
+    title: Title.FEATURE_VET_TITLE,
+    desc: Title.FEATURE_VET_DESC,
   },
   {
-    icon: color => <SparklesIcon color={color} size={22} />,
-    title: 'Pet Care & Farms',
-    desc: 'Nearby day care and boarding solutions.',
+    icon: (color) => <SparklesIcon color={color} size={22} />,
+    title: Title.FEATURE_CARE_TITLE,
+    desc: Title.FEATURE_CARE_DESC,
   },
   {
-    icon: color => <ChatBubbleLeftRightIcon color={color} size={22} />,
-    title: 'Pet Community',
-    desc: 'Engage socially with fellow pet owners.',
+    icon: (color) => <ChatBubbleLeftRightIcon color={color} size={22} />,
+    title: Title.FEATURE_COMMUNITY_TITLE,
+    desc: Title.FEATURE_COMMUNITY_DESC,
   },
   {
-    icon: color => <VideoCameraIcon color={color} size={22} />,
-    title: 'Reels & Media',
-    desc: 'Share reels, photos, and joyful moments.',
+    icon: (color) => <VideoCameraIcon color={color} size={22} />,
+    title: Title.FEATURE_REELS_TITLE,
+    desc: Title.FEATURE_REELS_DESC,
   },
 ];
 
@@ -111,10 +110,10 @@ const AboutUs: React.FC = () => {
       if (canOpen) {
         await Linking.openURL(WEBSITE_URL);
       } else {
-        Alert.alert('Error', 'Unable to open browser on this device.');
+        Alert.alert(Title.ERROR, Title.UNABLE_TO_OPEN_BROWSER);
       }
     } catch {
-      Alert.alert('Error', 'Something went wrong while opening the link.');
+      Alert.alert(Title.ERROR, Title.SOMETHING_WENT_WRONG);
     }
   };
 
@@ -161,14 +160,16 @@ const AboutUs: React.FC = () => {
           <View style={[styles.heroCard, dynamicStyles.card]}>
             <View style={styles.heroBadge}>
               <SparklesIcon color={Colors.lightBlue} size={18} />
-              <Text style={styles.heroBadgeText}>Connecting Pet Lovers</Text>
+              <Text style={styles.heroBadgeText}>
+                {Title.CONNECTING_PET_LOVERS}
+              </Text>
             </View>
             <Text style={[styles.heroTitle, dynamicStyles.primaryText]}>
-              Welcome to <Text style={styles.brandAccent}>PetHub</Text>
+              {Title.WELCOME_TO}{' '}
+              <Text style={styles.brandAccent}>{Title.APP_NAME}</Text>
             </Text>
             <Text style={[styles.heroSubtitle, dynamicStyles.secondaryText]}>
-              A comprehensive pet-care and social ecosystem designed to solve
-              everyday challenges for pet parents and caregivers worldwide.
+              {Title.ABOUT_HERO_SUBTITLE}
             </Text>
           </View>
 
@@ -177,26 +178,22 @@ const AboutUs: React.FC = () => {
             <View style={styles.sectionHeaderRow}>
               <UserCircleIcon color={Colors.lightBlue} size={26} />
               <Text style={[styles.sectionTitle, dynamicStyles.primaryText]}>
-                Meet the Founder
+                {Title.MEET_THE_FOUNDER}
               </Text>
             </View>
             <Text style={[styles.founderName, dynamicStyles.primaryText]}>
-              Mr. Saajan Gangawane
+              {Title.FOUNDER_NAME}
             </Text>
-            <Text style={styles.founderRole}>Founder & CEO, PetHub</Text>
+            <Text style={styles.founderRole}>{Title.FOUNDER_ROLE}</Text>
             <Text style={[styles.bodyText, dynamicStyles.secondaryText]}>
-              An avid animal lover who grew up caring for pets from childhood.
-              Understanding the real-world obstacles pet parents face—from busy
-              work schedules and finding reliable vets to quality day care—he
-              envisioned PetHub as a unified home for pet care and
-              companionship.
+              {Title.FOUNDER_BIO}
             </Text>
           </View>
 
           {/* Core Offerings */}
           <View style={styles.featuresSection}>
             <Text style={[styles.sectionHeading, dynamicStyles.primaryText]}>
-              What PetHub Offers
+              {Title.WHAT_PET_HUB_OFFERS}
             </Text>
             <View style={styles.featureGrid}>
               {FEATURES.map((item, index) => (
@@ -227,7 +224,7 @@ const AboutUs: React.FC = () => {
             <View style={styles.sectionHeaderRow}>
               <CalendarDaysIcon color={Colors.lightBlue} size={24} />
               <Text style={[styles.sectionTitle, dynamicStyles.primaryText]}>
-                Our Journey
+                {Title.OUR_JOURNEY}
               </Text>
             </View>
             <View style={styles.timelineContainer}>
@@ -265,19 +262,17 @@ const AboutUs: React.FC = () => {
           <View style={[styles.ctaCard, dynamicStyles.card]}>
             <GlobeAltIcon color={Colors.lightBlue} size={32} />
             <Text style={[styles.ctaHeading, dynamicStyles.primaryText]}>
-              An ITPC Product
+              {Title.CTA_HEADING}
             </Text>
             <Text style={[styles.ctaSubtitle, dynamicStyles.secondaryText]}>
-              PetHub is proud to be built and maintained by IT Pro Consult.
-              Explore our official website for announcements, updates, and
-              partnerships.
+              {Title.CTA_SUBTITLE}
             </Text>
             <TouchableOpacity
               activeOpacity={0.8}
               onPress={handleOpenWebsite}
               style={styles.ctaButton}
             >
-              <Text style={styles.ctaButtonText}>Visit IT Pro Consult</Text>
+              <Text style={styles.ctaButtonText}>{Title.CTA_BUTTON_TEXT}</Text>
               <ArrowTopRightOnSquareIcon color={Colors.WHITE} size={18} />
             </TouchableOpacity>
           </View>
@@ -285,10 +280,10 @@ const AboutUs: React.FC = () => {
           {/* Footer Version */}
           <View style={styles.footer}>
             <Text style={[styles.footerText, dynamicStyles.secondaryText]}>
-              PetHub • Version 1.0.0
+              {Title.VERSION}
             </Text>
             <Text style={[styles.footerText, dynamicStyles.secondaryText]}>
-              © 2026 IT Pro Consult. All rights reserved.
+              {Title.COPYRIGHT}
             </Text>
           </View>
         </View>

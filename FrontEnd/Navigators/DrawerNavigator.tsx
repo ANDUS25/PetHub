@@ -34,8 +34,9 @@ import InnerPetScreen from '../Component/Pets/InnerPetScreen';
 import { auth } from '../config/Config';
 import { Theme } from '../store/Slices/ThemeSlice';
 import { useAppDispatch, useAppSelector } from '../store/store';
+import { FontFamily, FontSize } from '../theme/Typography';
 import Colors from '../utils/color';
-import { ScreenRouteName, Title } from '../utils/Strings';
+import { ScreenRouteName, ScreenTitle, Title } from '../utils/Strings';
 import BottomNavigator from './BottomNavigator';
 
 interface DrawerItemConfig {
@@ -48,7 +49,7 @@ interface DrawerItemConfig {
 const drawerData: DrawerItemConfig[] = [
   {
     id: 1,
-    routeName: 'Home',
+    routeName: ScreenTitle.HOME,
     routeComponent: BottomNavigator,
     drawerIcon: (focused) => (
       <HomeIcon size={24} color={focused ? Colors.WHITE : Colors.BLACK} />
@@ -56,7 +57,7 @@ const drawerData: DrawerItemConfig[] = [
   },
   {
     id: 2,
-    routeName: 'Profile',
+    routeName: ScreenTitle.PROFILE,
     routeComponent: Profile,
     drawerIcon: (focused) => (
       <UserCircleIcon size={24} color={focused ? Colors.WHITE : Colors.BLACK} />
@@ -64,7 +65,7 @@ const drawerData: DrawerItemConfig[] = [
   },
   {
     id: 3,
-    routeName: 'About Us',
+    routeName: ScreenTitle.ABOUT_US,
     routeComponent: AboutUs,
     drawerIcon: (focused) => (
       <PlusIcon size={24} color={focused ? Colors.WHITE : Colors.BLACK} />
@@ -72,7 +73,7 @@ const drawerData: DrawerItemConfig[] = [
   },
   {
     id: 4,
-    routeName: 'Contact',
+    routeName: Title.CONTACT,
     routeComponent: ContactUs,
     drawerIcon: (focused) => (
       <PhoneIcon size={24} color={focused ? Colors.WHITE : Colors.BLACK} />
@@ -80,7 +81,7 @@ const drawerData: DrawerItemConfig[] = [
   },
   {
     id: 5,
-    routeName: 'Pets',
+    routeName: ScreenTitle.PETS,
     routeComponent: Pets,
     drawerIcon: (focused) => (
       <BugAntIcon size={24} color={focused ? Colors.WHITE : Colors.BLACK} />
@@ -88,7 +89,7 @@ const drawerData: DrawerItemConfig[] = [
   },
   {
     id: 6,
-    routeName: 'Settings',
+    routeName: ScreenTitle.SETTINGS,
     routeComponent: Settings,
     drawerIcon: (focused) => (
       <Cog6ToothIcon size={24} color={focused ? Colors.WHITE : Colors.BLACK} />
@@ -153,10 +154,7 @@ const CustomDrawer: React.FC<DrawerContentComponentProps> = (props) => {
         </View>
       </DrawerContentScrollView>
 
-      <View
-        className="py-3"
-        style={{ backgroundColor }}
-      >
+      <View className="py-3" style={{ backgroundColor }}>
         <TouchableOpacity
           onPress={handleSignOut}
           className="flex flex-row items-center h-12 rounded-xl bg-white mx-4 pl-2"
@@ -195,13 +193,13 @@ const DrawerNavigator: React.FC = () => {
             drawerInactiveBackgroundColor: '#EEF5ff',
             drawerActiveTintColor: Colors.WHITE,
             drawerLabelStyle: {
-              fontSize: 16,
-              fontFamily: 'Raleway-Medium',
+              fontSize: FontSize.LG,
+              fontFamily: FontFamily.RALEWAY_MEDIUM,
             },
             drawerItemStyle: {
               borderRadius: 15,
               backgroundColor:
-                getFocusedRouteNameFromRoute(route) === 'Home'
+                getFocusedRouteNameFromRoute(route) === ScreenTitle.HOME
                   ? '#090a0a'
                   : '#80a9e1',
             },

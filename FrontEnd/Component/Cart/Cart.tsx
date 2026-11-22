@@ -34,12 +34,12 @@ const CartComponent: React.FC = () => {
 
   const handlePayment = () => {
     const options = {
-      description: 'Credits towards consultation',
+      description: Title.CREDITS_TOWARDS_CONSULTATION,
       image: 'https://i.imgur.com/3g7nmJC.png',
-      currency: 'INR',
+      currency: Title.CURRENCY_INR,
       key: razorPayKeyID,
       amount: productPrice * 100,
-      name: 'PetHub',
+      name: Title.APP_NAME,
       order_id: '',
       prefill: {
         email: user?.userEmail || '',
@@ -55,7 +55,7 @@ const CartComponent: React.FC = () => {
       })
       .catch((error: any) => {
         ToastAndroid.show(
-          `${error?.error?.reason || 'Error'} : ${error?.error?.description || 'Payment Failed'}`,
+          `${error?.error?.reason || Title.ERROR} : ${error?.error?.description || Title.PAYMENT_FAILED}`,
           ToastAndroid.LONG,
         );
       });

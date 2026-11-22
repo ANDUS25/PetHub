@@ -1,3 +1,4 @@
+import AppText from './custom/AppText';
 import ButtonContainer from './custom/ButtonContainer';
 import DropdownContainer from './custom/DropdownContainer';
 import TextInputContainer from './custom/TextInputContainer';
@@ -6,6 +7,7 @@ import HeaderContainer from './Header';
 import ScrollViewContainer from './Views/ScrollView';
 
 export {
+  AppText,
   ButtonContainer,
   DropdownContainer,
   HeaderContainer,

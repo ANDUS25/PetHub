@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
 import pets from '../../JSON/pets.json';
 import { useAppSelector } from '../../store/store';
+import { FontFamily } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { ScreenRouteName } from '../../utils/Strings';
 
 interface PetsGridViewProps {
   mainPetName: string;
@@ -40,7 +42,7 @@ const PetsGridView: React.FC<PetsGridViewProps> = ({ mainPetName }) => {
         className="text-2xl ml-2"
         style={{
           color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-          fontFamily: 'Mulish-Medium',
+          fontFamily: FontFamily.MULISH_MEDIUM,
         }}
       >
         {mainPetName}
@@ -64,7 +66,10 @@ const PetsGridView: React.FC<PetsGridViewProps> = ({ mainPetName }) => {
           >
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('InnerPetScreen', { i: { item }, petProducts });
+                navigation.navigate(ScreenRouteName.INNER_PET_SCREEN, {
+                  i: { item },
+                  petProducts,
+                });
               }}
             >
               <Image

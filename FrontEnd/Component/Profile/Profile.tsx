@@ -5,7 +5,9 @@ import { ScrollViewContainer } from '../../Container';
 import Header from '../../Container/Header';
 import useAuth from '../../hooks/useAuth';
 import { useAppSelector } from '../../store/store';
+import { Typography } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { ScreenRouteName, ScreenTitle, Title } from '../../utils/Strings';
 
 const Profile: React.FC = () => {
   const userUpdatedInfo = useAppSelector((state) => state.userSlice?.updateUser);
@@ -13,178 +15,121 @@ const Profile: React.FC = () => {
   const { user } = useAuth();
   const navigation = useNavigation<any>();
 
+  const isLight = theme === 'light';
+  const labelColor = isLight ? Colors.BLACK : Colors.WHITE;
+  const valueColor = isLight ? Colors.WHITE : Colors.BLACK;
+  const valueBgColor = isLight
+    ? Colors.ACTIVE_TAB_BACKGROUND
+    : Colors.INACTIVE_TAB_BACKGROUND;
+
   return (
     <>
       <StatusBar />
       <ScrollViewContainer>
         <View>
-          <Header back={true} header={'Profile'} Drawer={true} />
+          <Header back={true} header={ScreenTitle.PROFILE} Drawer={true} />
           <View className="flex flex-col justify-center items-center">
             <Image source={require('../../assets/images/user.png')} />
             <View className="w-1/4 my-4">
               <TouchableOpacity
-                onPress={() => navigation.navigate('UpdateProfile')}
+                onPress={() => navigation.navigate(ScreenRouteName.UPDATE_PROFILE)}
                 className="bg-teal-800 p-5 rounded-xl"
               >
-                <Text className="text-white text-center">Update</Text>
+                <Text className="text-white text-center" style={Typography.button}>
+                  {Title.UPDATE}
+                </Text>
               </TouchableOpacity>
             </View>
           </View>
 
           <View>
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Name:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.NAME_LABEL}
               </Text>
               <Text
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: valueBgColor, color: valueColor },
+                ]}
               >
-                {userUpdatedInfo?.Name || 'N/A'}
+                {userUpdatedInfo?.Name || Title.NOT_AVAILABLE}
               </Text>
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Email:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.EMAIL_LABEL}
               </Text>
               <Text
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: valueBgColor, color: valueColor },
+                ]}
               >
-                {user?.email || 'N/A'}
+                {user?.email || Title.NOT_AVAILABLE}
               </Text>
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Age:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.AGE_LABEL}
               </Text>
               <Text
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: valueBgColor, color: valueColor },
+                ]}
               >
-                {userUpdatedInfo?.Age || 'N/A'}
+                {userUpdatedInfo?.Age || Title.NOT_AVAILABLE}
               </Text>
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Number:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.NUMBER_LABEL}
               </Text>
               <Text
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: valueBgColor, color: valueColor },
+                ]}
               >
-                {userUpdatedInfo?.Contact || 'N/A'}
+                {userUpdatedInfo?.Contact || Title.NOT_AVAILABLE}
               </Text>
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Country:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.COUNTRY_LABEL}
               </Text>
               <Text
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: valueBgColor, color: valueColor },
+                ]}
               >
-                {userUpdatedInfo?.Country || 'N/A'}
+                {userUpdatedInfo?.Country || Title.NOT_AVAILABLE}
               </Text>
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Something Extra !
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.SOMETHING_EXTRA_LABEL}
               </Text>
               <Text
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: valueBgColor, color: valueColor },
+                ]}
               >
-                {userUpdatedInfo?.SomeThingExtra || 'N/A'}
+                {userUpdatedInfo?.SomeThingExtra || Title.NOT_AVAILABLE}
               </Text>
             </View>
           </View>

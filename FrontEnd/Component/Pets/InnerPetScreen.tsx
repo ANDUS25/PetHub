@@ -8,7 +8,9 @@ import {
 } from 'react-native';
 import { HeaderContainer, ScrollViewContainer } from '../../Container';
 import { useAppSelector } from '../../store/store';
+import { FontFamily, FontSize } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { Title } from '../../utils/Strings';
 
 const { width } = Dimensions.get('window');
 
@@ -40,7 +42,7 @@ const InnerPetScreen: React.FC<InnerPetScreenProps> = ({ route }) => {
 
   return (
     <ScrollViewContainer>
-      <HeaderContainer back={true} header={'Pet Details'} Drawer={true} />
+      <HeaderContainer back={true} header={Title.PET_DETAILS} Drawer={true} />
 
       <View className="my-4">
         <Image
@@ -58,7 +60,7 @@ const InnerPetScreen: React.FC<InnerPetScreenProps> = ({ route }) => {
           {petAllInfo?.item?.color && (
             <View className="flex flex-row items-center">
               <Text className="text-lg font-bold" style={styles(theme).text}>
-                Colors:-
+                {Title.COLORS_LABEL}
               </Text>
               <Text className="flex flex-row w-80 ml-2">
                 {petAllInfo?.item?.color?.map((colorItem, index) => (
@@ -74,7 +76,7 @@ const InnerPetScreen: React.FC<InnerPetScreenProps> = ({ route }) => {
 
           <View className="flex flex-row items-center my-2">
             <Text className="text-lg font-bold" style={styles(theme).text}>
-              Total Life Span:-
+              {Title.TOTAL_LIFESPAN_LABEL}
             </Text>
             <Text style={styles(theme).text} className="ml-2">
               {petAllInfo?.item?.Lifespan}
@@ -83,7 +85,7 @@ const InnerPetScreen: React.FC<InnerPetScreenProps> = ({ route }) => {
 
           <View className="flex flex-row items-center my-2">
             <Text className="text-lg font-bold" style={styles(theme).text}>
-              Food:-
+              {Title.FOOD_LABEL}
             </Text>
             <Text>
               {petProducts.map((prod, index) => (
@@ -99,7 +101,7 @@ const InnerPetScreen: React.FC<InnerPetScreenProps> = ({ route }) => {
               className="text-lg text-justify font-bold"
               style={styles(theme).text}
             >
-              Info:-{' '}
+              {Title.INFO_LABEL}
               <Text style={styles(theme).text}>{petAllInfo?.item?.info}</Text>
             </Text>
           </View>
@@ -109,7 +111,7 @@ const InnerPetScreen: React.FC<InnerPetScreenProps> = ({ route }) => {
               className="text-lg text-justify font-bold"
               style={styles(theme).text}
             >
-              Facts:-{' '}
+              {Title.FACTS_LABEL}
               <Text style={styles(theme).text}>{petAllInfo?.item?.Facts}</Text>
             </Text>
           </View>
@@ -118,7 +120,7 @@ const InnerPetScreen: React.FC<InnerPetScreenProps> = ({ route }) => {
         {petAllInfo?.item?.collection && (
           <View>
             <Text className="text-lg font-bold" style={styles(theme).text}>
-              Collection:-
+              {Title.COLLECTION_LABEL}
             </Text>
             <View className="flex-row flex-wrap justify-center">
               {petAllInfo.item.collection.map((col, index) => (
@@ -147,7 +149,7 @@ const styles = (theme: string) =>
   StyleSheet.create({
     text: {
       color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-      fontSize: 17,
-      fontFamily: 'Mulish-Medium',
+      fontSize: FontSize.XL - 1, // 17
+      fontFamily: FontFamily.MULISH_MEDIUM,
     },
   });

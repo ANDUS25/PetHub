@@ -4,6 +4,7 @@ import { SceneMap, TabView } from 'react-native-tab-view';
 import Header from '../../Container/Header';
 import { useAppSelector } from '../../store/store';
 import { GlobalAppTheme } from '../../utils/CommonUtils';
+import { ScreenTitle, Title } from '../../utils/Strings';
 import Calculator from './Tabs/Calculator';
 import Policy from './Tabs/Policy';
 import Register from './Tabs/Register';
@@ -21,9 +22,9 @@ const FunNdEarn: React.FC = () => {
 
   const [index, setIndex] = useState(0);
   const [routes] = useState([
-    { key: 'first', title: 'Register' },
-    { key: 'second', title: 'Policy' },
-    { key: 'three', title: 'Earn Calculator' },
+    { key: 'first', title: Title.REGISTER },
+    { key: 'second', title: Title.POLICY },
+    { key: 'three', title: Title.EARN_CALCULATOR },
   ]);
 
   return (
@@ -33,7 +34,7 @@ const FunNdEarn: React.FC = () => {
         flex: 1,
       }}
     >
-      <Header back={false} header={'Fun & Earn'} Drawer={true} />
+      <Header back={false} header={ScreenTitle.FUN_AND_EARN} Drawer={true} />
       <TabView
         navigationState={{ index, routes }}
         renderScene={renderScene}

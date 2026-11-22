@@ -3,7 +3,7 @@ import LottieView from 'lottie-react-native';
 import React from 'react';
 import { StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import Colors from '../utils/color';
-import { Title } from '../utils/Strings';
+import { ScreenName, Title } from '../utils/Strings';
 
 const WelcomeScreen: React.FC = () => {
   const navigation = useNavigation<any>();
@@ -23,7 +23,7 @@ const WelcomeScreen: React.FC = () => {
         />
         <TouchableOpacity
           className="p-3 bg-blue-300 w-1/2 rounded-xl flex flex-row justify-center items-center"
-          onPress={() => navigation.navigate('SignIn')}
+          onPress={() => navigation.navigate(ScreenName.SIGN_IN)}
         >
           <Text className="text-2xl text-center text-black">
             {Title.WELCOME}

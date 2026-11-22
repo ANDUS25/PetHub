@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 import { HeaderContainer, TextInputContainer } from '../../Container/index';
 import { useAppSelector } from '../../store/store';
+import { FontFamily, FontSize } from '../../theme/Typography';
+import Colors from '../../utils/color';
 import {
   globalAppActiveTheme,
   globalAppBlackAndWhiteTheme,
@@ -65,13 +67,18 @@ const ContactUs: React.FC = () => {
         textInput: {
           backgroundColor: globalAppActiveTheme(theme),
           color: globalAppBlackAndWhiteTheme(theme),
-          fontFamily: 'Mulish-Medium',
-          fontSize: 20,
+          fontFamily: FontFamily.MULISH_MEDIUM,
+          fontSize: FontSize.XXL,
         },
         mainHeader: {
-          fontFamily: 'Mulish-Bold',
-          fontSize: 20,
+          fontFamily: FontFamily.MULISH_BOLD,
+          fontSize: FontSize.XXL,
           color: globalAppBlackAndWhiteTheme(theme),
+        },
+        submitButtonText: {
+          fontFamily: FontFamily.MULISH_BOLD,
+          fontSize: FontSize.XXL,
+          color: Colors.WHITE,
         },
       }),
     [theme],
@@ -91,8 +98,7 @@ const ContactUs: React.FC = () => {
           <View className="flex flex-col justify-between mx-2">
             <View className="my-4">
               <Text style={dynamicStyles.mainHeader} className="text-center">
-                If you would like to donate to our cause or report a stray
-                animal, then please contact our 24/7 help center.
+                {Title.CONTACT_HELP_CENTER_MSG}
               </Text>
             </View>
             <View>
@@ -101,7 +107,7 @@ const ContactUs: React.FC = () => {
                 className="w-full p-3 rounded-2xl my-2"
                 style={dynamicStyles.textInput}
                 TextChange={(e: string) =>
-                  setUserInputInfo(prev => ({ ...prev, fName: e }))
+                  setUserInputInfo((prev) => ({ ...prev, fName: e }))
                 }
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
               />
@@ -111,7 +117,7 @@ const ContactUs: React.FC = () => {
                 className="w-full p-3 rounded-2xl my-2"
                 style={dynamicStyles.textInput}
                 TextChange={(e: string) =>
-                  setUserInputInfo(prev => ({ ...prev, lName: e }))
+                  setUserInputInfo((prev) => ({ ...prev, lName: e }))
                 }
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
               />
@@ -121,7 +127,7 @@ const ContactUs: React.FC = () => {
                 className="w-full p-3 rounded-2xl my-2"
                 style={dynamicStyles.textInput}
                 TextChange={(e: string) =>
-                  setUserInputInfo(prev => ({ ...prev, email: e }))
+                  setUserInputInfo((prev) => ({ ...prev, email: e }))
                 }
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
               />
@@ -130,7 +136,7 @@ const ContactUs: React.FC = () => {
                 placeholder={Title.SUBJECT}
                 className="w-full p-3 rounded-2xl my-2"
                 TextChange={(e: string) =>
-                  setUserInputInfo(prev => ({ ...prev, subject: e }))
+                  setUserInputInfo((prev) => ({ ...prev, subject: e }))
                 }
                 style={dynamicStyles.textInput}
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
@@ -140,7 +146,7 @@ const ContactUs: React.FC = () => {
                 placeholder={Title.MESSAGE}
                 className="w-full p-3 rounded-2xl my-2"
                 TextChange={(e: string) => {
-                  setUserInputInfo(prev => ({ ...prev, message: e }));
+                  setUserInputInfo((prev) => ({ ...prev, message: e }));
                 }}
                 style={dynamicStyles.textInput}
                 placeHolderColor={globalAppBlackAndWhiteTheme(theme)}
@@ -149,7 +155,9 @@ const ContactUs: React.FC = () => {
 
             <TouchableOpacity onPress={handleConfirmation}>
               <View className="flex flex-row justify-center mx-auto bg-blue-500 w-1/2 p-4 rounded-2xl mt-6">
-                <Text className="text-xl text-white">{Title.SUBMIT}</Text>
+                <Text style={dynamicStyles.submitButtonText}>
+                  {Title.SUBMIT}
+                </Text>
               </View>
             </TouchableOpacity>
           </View>

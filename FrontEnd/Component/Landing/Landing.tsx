@@ -12,9 +12,10 @@ import {
 import Header from '../../Container/Header';
 import services from '../../JSON/services.json';
 import { useAppSelector } from '../../store/store';
+import { FontFamily } from '../../theme/Typography';
 import Colors from '../../utils/color';
 import { GlobalAppTheme } from '../../utils/CommonUtils';
-import { AppTheme, ScreenRouteName } from '../../utils/Strings';
+import { AppTheme, ScreenRouteName, ScreenTitle } from '../../utils/Strings';
 
 const { height, width } = Dimensions.get('window');
 
@@ -51,7 +52,7 @@ const LandingScreen: React.FC = () => {
           <Text
             className="text-2xl font-bold"
             style={{
-              fontFamily: 'Mulish-Bold',
+              fontFamily: FontFamily.MULISH_BOLD,
               color:
                 theme === AppTheme.LIGHT ? Colors.WHITE : Colors.TEXT_LIGHT_COLOR,
             }}
@@ -68,7 +69,7 @@ const LandingScreen: React.FC = () => {
       className="px-2 mb-16 flex-1"
       style={{ backgroundColor: GlobalAppTheme(theme) }}
     >
-      <Header back={false} header={'Home'} Drawer={true} />
+      <Header back={false} header={ScreenTitle.HOME} Drawer={true} />
 
       <FlatList
         data={services as ServiceItem[]}

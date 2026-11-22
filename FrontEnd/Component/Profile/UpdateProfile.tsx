@@ -14,7 +14,9 @@ import Header from '../../Container/Header';
 import useAuth from '../../hooks/useAuth';
 import { updateData } from '../../store/Slices/UserSlice';
 import { useAppDispatch, useAppSelector } from '../../store/store';
+import { Typography } from '../../theme/Typography';
 import Colors from '../../utils/color';
+import { ScreenRouteName, ScreenTitle, Title } from '../../utils/Strings';
 
 const UpdateProfile: React.FC = () => {
   const { user } = useAuth();
@@ -28,6 +30,13 @@ const UpdateProfile: React.FC = () => {
   const [quote, setQuote] = useState('');
   const [userContact, setUserContact] = useState('');
 
+  const isLight = theme === 'light';
+  const labelColor = isLight ? Colors.BLACK : Colors.WHITE;
+  const inputColor = isLight ? Colors.WHITE : Colors.BLACK;
+  const inputBgColor = isLight
+    ? Colors.ACTIVE_TAB_BACKGROUND
+    : Colors.INACTIVE_TAB_BACKGROUND;
+
   const handleProfileUpdate = () => {
     dispatch(
       updateData({
@@ -40,10 +49,10 @@ const UpdateProfile: React.FC = () => {
       }),
     );
 
-    ToastAndroid.show('Profile Update Successfully', ToastAndroid.SHORT);
+    ToastAndroid.show(Title.PROFILE_UPDATE_SUCCESSFULLY, ToastAndroid.SHORT);
 
     setTimeout(() => {
-      navigation.navigate('Profile');
+      navigation.navigate(ScreenRouteName.PROFILE);
     }, 1000);
   };
 
@@ -52,100 +61,61 @@ const UpdateProfile: React.FC = () => {
       <StatusBar />
       <ScrollViewContainer>
         <View>
-          <Header back={true} header={'Update Profile'} Drawer={true} />
+          <Header back={true} header={ScreenTitle.PROFILE} Drawer={true} />
           <View className="flex items-center my-4">
             <Image source={require('../../assets/images/user.png')} />
           </View>
 
           <View>
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Name:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.NAME_LABEL}
               </Text>
               <TextInput
                 value={userName}
                 onChangeText={(e) => setUserName(e)}
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: inputBgColor, color: inputColor },
+                ]}
               />
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Email:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.EMAIL_LABEL}
               </Text>
               <TextInput
                 value={user?.email || ''}
                 editable={false}
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: inputBgColor, color: inputColor },
+                ]}
               />
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Age:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.AGE_LABEL}
               </Text>
               <TextInput
                 value={age}
                 onChangeText={(e) => setAge(e)}
                 className="w-full p-3 rounded-2xl my-2"
                 keyboardType="numeric"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: inputBgColor, color: inputColor },
+                ]}
               />
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Number:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.NUMBER_LABEL}
               </Text>
               <TextInput
                 value={userContact}
@@ -153,69 +123,42 @@ const UpdateProfile: React.FC = () => {
                 className="w-full p-3 rounded-2xl my-2"
                 keyboardType="numeric"
                 maxLength={10}
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: inputBgColor, color: inputColor },
+                ]}
               />
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Country:-
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.COUNTRY_LABEL}
               </Text>
               <TextInput
                 value={country}
                 onChangeText={(e) => setCountry(e)}
                 className="w-full p-3 rounded-2xl my-2"
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                style={[
+                  Typography.input,
+                  { backgroundColor: inputBgColor, color: inputColor },
+                ]}
               />
             </View>
 
             <View className="m-2">
-              <Text
-                style={{
-                  color: theme === 'light' ? Colors.BLACK : Colors.WHITE,
-                  fontFamily: 'Raleway-Regular',
-                  fontSize: 18,
-                }}
-              >
-                Something Extra !
+              <Text style={[Typography.inputLabel, { color: labelColor }]}>
+                {Title.SOMETHING_EXTRA_LABEL}
               </Text>
               <TextInput
                 value={quote}
                 onChangeText={(e) => setQuote(e)}
                 className="w-full p-3 rounded-2xl my-2"
-                placeholder="Write something"
-                placeholderTextColor={theme === 'light' ? Colors.WHITE : Colors.BLACK}
-                style={{
-                  backgroundColor:
-                    theme === 'light'
-                      ? Colors.ACTIVE_TAB_BACKGROUND
-                      : Colors.INACTIVE_TAB_BACKGROUND,
-                  color: theme === 'light' ? Colors.WHITE : Colors.BLACK,
-                  fontFamily: 'Mulish-Medium',
-                  fontSize: 20,
-                }}
+                placeholder={Title.WRITE_SOMETHING}
+                placeholderTextColor={isLight ? Colors.WHITE : Colors.BLACK}
+                style={[
+                  Typography.input,
+                  { backgroundColor: inputBgColor, color: inputColor },
+                ]}
               />
             </View>
           </View>
@@ -226,7 +169,9 @@ const UpdateProfile: React.FC = () => {
               onPress={handleProfileUpdate}
               className="bg-teal-800 p-5 rounded-xl"
             >
-              <Text className="text-white text-center">Save</Text>
+              <Text className="text-white text-center" style={Typography.button}>
+                {Title.SAVE}
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
