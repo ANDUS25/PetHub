@@ -13,6 +13,25 @@ const Colors = {
   BUTTON_LIGHT: '#6699B7',
   BUTTON_DARK: '#010D14',
   AUTH_LINK: '#4F75FF',
+
+  // Brand & Blues
+  PRIMARY_BLUE: '#2563EB',
+  LIGHT_BLUE: '#3B82F6',
+  lightBlue: '#3B82F6',
+  BLUE_TINT: '#EFF6FF',
+
+  // Cards & Backgrounds
+  CARD_BG_LIGHT: '#FFFFFF',
+  CARD_BG_DARK: '#0F172A',
+  CARD_BORDER_LIGHT: '#E2E8F0',
+  CARD_BORDER_DARK: '#1E293B',
+
+  // Typography & Text
+  TEXT_MUTED_LIGHT: '#64748B',
+  TEXT_MUTED_DARK: '#94A3B8',
+
+  // Dividers & Timeline
+  BORDER_LINE: '#CBD5E1',
 };
 
 export default Colors;

@@ -14,9 +14,9 @@ import RazorpayCheckout from 'react-native-razorpay';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeaderContainer } from '../../Container';
 import { deleteProduct } from '../../store/Slices/CartSlice';
-import { AppTheme, Title } from '../../utils/Strings';
 import Colors from '../../utils/Colors';
 import { GlobalAppTheme } from '../../utils/CommonUtils';
+import { AppTheme, Title } from '../../utils/Strings';
 
 const CartComponent = () => {
   const dispatch = useDispatch();
@@ -62,7 +62,7 @@ const CartComponent = () => {
       });
   };
 
-  const handleDeleteCart = obj => {
+  const handleDeleteCart = (obj: { id: number; name: string }) => {
     Alert.alert(Title.ARE_WANT_TO_DELETE_THIS_CART, '', [
       {
         text: Title.YES,
@@ -98,14 +98,14 @@ const CartComponent = () => {
 
   return (
     <View className="flex-1" style={{ backgroundColor: GlobalAppTheme(theme) }}>
-      <HeaderContainer back={true} header={'Cart'} Drawer={true} />
+      <HeaderContainer back={true} header={Title.CART} Drawer={true} />
 
       <FlatList
         data={cartInfo}
         renderItem={item => (
           <View className="my-4 bg-slate-800 rounded-lg mx-2">
             <View
-              className="rounded-T-lg flex flex-row"
+              className="rounded-t-lg flex flex-row"
               style={{
                 backgroundColor: GlobalAppTheme(
                   theme,
@@ -122,13 +122,16 @@ const CartComponent = () => {
                 resizeMode="cover"
                 style={{ height: 140, width: 200 }}
               />
+
               <View className="justify-center mx-2 space-y-3">
                 <Text className="text-lg" style={{ color: Colors.WHITE }}>
                   {item?.item?.data?.Name}
                 </Text>
+
                 <Text className="text-base" style={{ color: Colors.WHITE }}>
                   {Title.TOTAL_QUANTITY} :- {item?.item?.quantity}
                 </Text>
+
                 <Text className="text-base" style={{ color: Colors.WHITE }}>
                   {item?.item?.price} {Title.RUPEES_SYMBOL} {Title.ONLY_SIGN}
                 </Text>
@@ -151,7 +154,7 @@ const CartComponent = () => {
       />
 
       <TouchableOpacity
-        onPress={() => handlePayment()}
+        onPress={handlePayment}
         className="mx-2 rounded-xl"
         style={{
           backgroundColor:

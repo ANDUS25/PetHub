@@ -17,6 +17,21 @@ const Title = {
   VETERAN: 'Veteran +',
   WELCOME: 'Welcome',
   YES: 'Yes',
+  ABOUT_US: 'About Us',
+  CART: 'Cart',
+  SUBMIT: 'Submit',
+  PLEASE_FILL_NAMES_AND_EMAIL_AT_LEAST: 'please fill Names and Email at least',
+  THANK_YOU_FOR_YOUR_RESPONSE: 'Thank You for your response',
+  WANT_TO_SUBMIT_DATA: 'Want to Submit Data !!!',
+  FIRST_NAME: 'First Name',
+  Last_Name: 'Last Name',
+  Email_Address: 'Email Address',
+  SUBJECT: 'Subject',
+  MESSAGE: 'Message',
+  PRODUCTS: 'Products',
+  FOOD: 'Food',
+  BED: 'Bed',
+  Accessories: 'Accessories',
 };
 
 const ScreenTitle = {
@@ -26,6 +41,7 @@ const ScreenTitle = {
   HOME: 'Home',
   SHOPPING: 'Shopping',
   SOCIAL: 'Social',
+  CONTACT_US: 'Contact Us',
 };
 
 const ScreenName = {
@@ -49,4 +65,4 @@ const AppTheme = {
   DARK: 'dark',
 };
 
-export { Title, ScreenTitle, ScreenName, ScreenRouteName, AppTheme };
+export { AppTheme, ScreenName, ScreenRouteName, ScreenTitle, Title };
